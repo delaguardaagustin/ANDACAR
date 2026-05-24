@@ -1,0 +1,1558 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Adancar - Construcción Integral en San Antonio, Chile. Obra gruesa, telecomunicaciones, CCTV y seguridad. Empresa certificada DAWA.">
+<meta name="keywords" content="construccion, telecomunicaciones, CCTV, seguridad, San Antonio, Chile, obra gruesa, fibra optica, instalaciones, adancar">
+<meta property="og:title" content="Adancar - Construcción Integral | San Antonio, Chile">
+<meta property="og:description" content="Construimos desde los cimientos hasta la última conexión. Construcción, Telecomunicaciones y Seguridad en San Antonio, V Región, Chile.">
+<meta property="og:type" content="website">
+<title>Adancar - Construcción Integral | San Antonio, Chile</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800&family=Nunito:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+/* ========== VARIABLES ========== */
+:root {
+  --dark: #0d0d0d;
+  --dark2: #141414;
+  --dark3: #1a1a1a;
+  --card-bg: #1e1e1e;
+  --yellow: #F5A623;
+  --yellow-dark: #d4891a;
+  --logo-blue: #1a3a6e;
+  --logo-blue2: #2196c4;
+  --logo-cyan: #00b4d8;
+  --white: #ffffff;
+  --gray: #a0a0a0;
+  --gray2: #666;
+  --border: rgba(255,255,255,0.08);
+  --radius: 12px;
+  --radius-sm: 8px;
+  --shadow: 0 8px 32px rgba(0,0,0,0.4);
+  --transition: 0.3s ease;
+  --font-title: 'Barlow Condensed', sans-serif;
+  --font-body: 'Nunito', sans-serif;
+}
+
+/* ========== RESET ========== */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; font-size: 16px; }
+html { height: -webkit-fill-available; }
+body { background: var(--dark); color: var(--white); font-family: var(--font-body); line-height: 1.6; overflow-x: hidden; }
+img { max-width: 100%; display: block; }
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+button { cursor: pointer; border: none; background: none; font-family: inherit; }
+input, textarea, select { font-family: var(--font-body); }
+
+/* ========== ACCESSIBILITY ========== */
+.skip-link { position: absolute; top: -60px; left: 0; background: var(--yellow); color: var(--dark); padding: 8px 16px; font-weight: 700; z-index: 10000; transition: top 0.2s; }
+.skip-link:focus { top: 0; }
+
+/* ========== UTILITIES ========== */
+.container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+.section-badge { display: inline-block; font-family: var(--font-title); font-size: 13px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--yellow); border: 1px solid rgba(245,166,35,0.3); padding: 5px 14px; border-radius: 20px; margin-bottom: 14px; }
+.section-title { font-family: var(--font-title); font-size: clamp(32px, 5vw, 52px); font-weight: 800; line-height: 1.1; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 1px; }
+.section-subtitle { font-size: 16px; color: var(--gray); max-width: 600px; line-height: 1.7; }
+.btn { display: inline-flex; align-items: center; gap: 8px; padding: 13px 28px; min-height: 44px; border-radius: var(--radius-sm); font-family: var(--font-title); font-size: 15px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; transition: background-color var(--transition), transform var(--transition), box-shadow var(--transition), color var(--transition); cursor: pointer; }
+.btn-primary { background: var(--yellow); color: var(--dark); }
+.btn-primary:hover { background: var(--yellow-dark); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(245,166,35,0.35); }
+.btn-outline { background: transparent; color: var(--white); border: 2px solid rgba(255,255,255,0.3); }
+.btn-outline:hover { border-color: var(--white); background: rgba(255,255,255,0.08); transform: translateY(-2px); }
+.btn-cyan { background: var(--logo-cyan); color: var(--white); }
+.btn-cyan:hover { background: var(--logo-blue2); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,180,216,0.35); }
+
+/* ========== FADE IN ANIMATION ========== */
+.fade-in { opacity: 0; transform: translateY(28px); transition: opacity 0.6s ease, transform 0.6s ease; }
+.fade-in.visible { opacity: 1; transform: translateY(0); }
+@media (prefers-reduced-motion: reduce) { .fade-in { transition: none; opacity: 1; transform: none; } }
+
+/* ========== NAV ========== */
+  #nav.scrolled {
+    background: rgba(13,13,13,0.99);
+    box-shadow: 0 2px 20px rgba(0,0,0,0.5);
+  }
+  #nav.scrolled .nav-logo img { height: 36px; }
+
+#nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: rgba(13,13,13,0.96); -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); transition: background var(--transition), border-color var(--transition), box-shadow var(--transition); }
+.nav-inner { display: flex; align-items: center; justify-content: space-between; height: 72px; gap: 24px; }
+.nav-logo { display: flex; align-items: center; flex-shrink: 0; }
+.nav-logo img { height: 48px; width: auto; }
+.nav-links { display: flex; align-items: center; gap: 6px; }
+.nav-links a { font-family: var(--font-title); font-size: 14px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(255,255,255,0.75); padding: 6px 12px; border-radius: 6px; transition: color var(--transition), background var(--transition); }
+.nav-links a.active,
+  .nav-links a:hover { color: var(--white); background: rgba(255,255,255,0.07); }
+.nav-cta { font-family: var(--font-title); font-size: 13px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; background: var(--yellow); color: var(--dark); padding: 9px 20px; border-radius: var(--radius-sm); transition: background-color var(--transition), transform var(--transition), box-shadow var(--transition); white-space: nowrap; }
+.nav-cta:hover { background: var(--yellow-dark); transform: translateY(-1px); }
+.hamburger { display: none; flex-direction: column; gap: 5px; padding: 8px; cursor: pointer; z-index: 1100;
+  min-width: 44px; min-height: 44px;
+}
+.hamburger span { display: block; width: 24px; height: 2.5px; background: var(--white); border-radius: 2px; transition: transform 0.35s ease, opacity 0.35s ease, width 0.35s ease; transform-origin: center; }
+.hamburger.open span:nth-child(1) { transform: translateY(7.5px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+.hamburger.open span:nth-child(3) { transform: translateY(-7.5px) rotate(-45deg); }
+.mobile-menu { position: fixed; inset: 0; background: rgba(13,13,13,0.98); z-index: 1050; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 32px; will-change: transform;
+  transform: translateX(100%); transition: transform 0.4s cubic-bezier(0.4,0,0.2,1); }
+.mobile-menu.open { transform: translateX(0); }
+.mobile-menu a { font-family: var(--font-title); font-size: 28px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--white); transition: color var(--transition); }
+.mobile-menu a:hover { color: var(--yellow); }
+.mobile-menu .mob-cta { background: var(--yellow); color: var(--dark); padding: 14px 36px; border-radius: var(--radius-sm); }
+
+/* ========== HERO ========== */
+#inicio { min-height: 100vh; min-height: -webkit-fill-available; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; padding: 120px 0 80px; background: linear-gradient(145deg, #030b14 0%, #061624 40%, #0a1a2e 70%, #061020 100%); }
+.hero-pattern { position: absolute; inset: 0; z-index: 0; }
+.hero-content { position: relative; z-index: 1; text-align: center; max-width: 820px; margin: 0 auto; }
+.hero-badge { display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-title); font-size: 13px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--yellow); border: 1px solid rgba(245,166,35,0.35); padding: 7px 18px; border-radius: 20px; margin-bottom: 28px; }
+.hero-badge i { font-size: 10px; }
+.hero-title { font-family: var(--font-title); font-size: clamp(40px, 7vw, 76px); font-weight: 800; line-height: 1.0; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 22px; }
+.hero-title span { color: var(--yellow); }
+.hero-subtitle { font-size: clamp(15px, 2vw, 17px); color: rgba(255,255,255,0.72); max-width: 580px; margin: 0 auto 38px; line-height: 1.75; }
+.hero-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; margin-bottom: 64px; }
+.hero-pillars { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; max-width: 600px; margin: 0 auto; }
+.pillar { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: var(--radius); padding: 20px 16px; text-align: center; -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px); }
+.pillar i { font-size: 22px; color: var(--yellow); margin-bottom: 8px; }
+.pillar h4 { font-family: var(--font-title); font-size: 14px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--white); }
+
+/* ========== SERVICIOS ========== */
+#servicios { padding: 100px 0; background: var(--dark2); }
+.servicios-header { text-align: center; margin-bottom: 60px; }
+.servicios-header .section-subtitle { margin: 0 auto; }
+.servicios-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.service-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: var(--radius); padding: 36px 28px; position: relative; overflow: hidden; transition: transform var(--transition), border-color var(--transition), box-shadow var(--transition); cursor: default; }
+.service-card::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 4px; background: var(--yellow); transform: scaleY(0); transition: transform var(--transition); transform-origin: bottom; }
+.service-card:hover { border-color: rgba(245,166,35,0.3); transform: translateY(-4px); box-shadow: var(--shadow); }
+.service-card:hover::before { transform: scaleY(1); }
+.service-icon { width: 56px; height: 56px; background: rgba(245,166,35,0.12); border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; margin-bottom: 20px; }
+.service-icon i { font-size: 24px; color: var(--yellow); }
+.service-card h3 { font-family: var(--font-title); font-size: 20px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 10px; color: var(--white); }
+.service-card p { font-size: 14px; color: var(--gray); line-height: 1.65; }
+.cert-badge { display: inline-flex; align-items: center; gap: 5px; margin-top: 14px; background: rgba(0,180,216,0.12); border: 1px solid rgba(0,180,216,0.25); color: var(--logo-cyan); font-size: 11px; font-weight: 600; letter-spacing: 1px; padding: 4px 10px; border-radius: 20px; text-transform: uppercase; }
+
+/* ========== POR QUE ELEGIRNOS ========== */
+#ventajas { padding: 100px 0; background: var(--dark3); }
+.ventajas-header { text-align: center; margin-bottom: 60px; }
+.ventajas-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+.ventaja-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: var(--radius); padding: 36px 24px; text-align: center; transition: transform var(--transition), border-color var(--transition), box-shadow var(--transition); }
+.ventaja-card:hover { transform: translateY(-4px); border-color: rgba(245,166,35,0.25); box-shadow: var(--shadow); }
+.ventaja-num { font-family: var(--font-title); font-size: 52px; font-weight: 800; color: var(--yellow); line-height: 1; margin-bottom: 10px; }
+.ventaja-card h3 { font-family: var(--font-title); font-size: 17px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--white); margin-bottom: 10px; }
+.ventaja-card p { font-size: 13.5px; color: var(--gray); line-height: 1.6; }
+.ventaja-icon { font-size: 28px; color: var(--yellow); margin-bottom: 14px; }
+
+/* ========== QUIENES SOMOS ========== */
+#nosotros { padding: 100px 0; background: var(--dark2); }
+.nosotros-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+.nosotros-text .section-subtitle { max-width: none; margin-bottom: 24px; }
+.nosotros-text p { font-size: 15px; color: var(--gray); line-height: 1.8; margin-bottom: 20px; }
+.nosotros-highlight { background: rgba(245,166,35,0.07); border-left: 4px solid var(--yellow); padding: 16px 20px; border-radius: 0 var(--radius-sm) var(--radius-sm) 0; margin: 28px 0; font-size: 15px; color: rgba(255,255,255,0.85); font-style: italic; line-height: 1.7; }
+.stats-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.stat-item { background: var(--card-bg); border: 1px solid var(--border); border-radius: var(--radius); padding: 28px 24px; text-align: center; }
+.stat-num { font-family: var(--font-title); font-size: 48px; font-weight: 800; color: var(--yellow); line-height: 1; }
+.stat-label { font-size: 13px; color: var(--gray); text-transform: uppercase; letter-spacing: 1px; margin-top: 6px; font-weight: 600; }
+
+/* ========== EQUIPO ========== */
+#equipo { padding: 100px 0; background: var(--dark3); }
+.equipo-header { text-align: center; margin-bottom: 60px; }
+.equipo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; max-width: 900px; margin: 0 auto; }
+.team-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: var(--radius); padding: 40px 36px; position: relative; overflow: hidden; }
+.team-card::after { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--logo-blue), var(--logo-cyan)); }
+.team-area { font-family: var(--font-title); font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--logo-cyan); margin-bottom: 8px; }
+.team-avatar { width: 80px; height: 80px; border-radius: 50%; background: linear-gradient(135deg, var(--logo-blue), var(--logo-cyan)); display: flex; align-items: center; justify-content: center; margin-bottom: 20px; font-size: 32px; font-weight: 900; font-family: var(--font-title); color: var(--white); border: 3px solid rgba(255,255,255,0.1); }
+.team-card h3 { font-family: var(--font-title); font-size: 22px; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; color: var(--white); margin-bottom: 4px; }
+.team-role { font-size: 13px; color: var(--logo-cyan); font-weight: 600; margin-bottom: 16px; }
+.team-desc { font-size: 14px; color: var(--gray); line-height: 1.7; margin-bottom: 20px; }
+.cert-list { display: flex; flex-direction: column; gap: 8px; }
+.cert-item { display: flex; align-items: center; gap: 10px; font-size: 13px; color: rgba(255,255,255,0.8); }
+.cert-item i { color: var(--yellow); font-size: 12px; flex-shrink: 0; }
+.team-note { margin-top: 48px; background: rgba(245,166,35,0.06); border: 1px solid rgba(245,166,35,0.2); border-radius: var(--radius); padding: 20px 24px; text-align: center; }
+.team-note p { font-size: 14px; color: rgba(255,255,255,0.75); line-height: 1.65; }
+.team-note strong { color: var(--yellow); }
+.team-closeline { text-align: center; margin-top: 20px; font-family: var(--font-title); font-size: 18px; font-weight: 700; letter-spacing: 1px; color: var(--logo-cyan); text-transform: uppercase; }
+
+/* ========== PROCESO ========== */
+#proceso { padding: 100px 0; background: var(--dark2); }
+.proceso-header { text-align: center; margin-bottom: 60px; }
+.proceso-steps { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0; position: relative; }
+.proceso-steps::before { content: ''; position: absolute; top: 36px; left: 10%; right: 10%; height: 2px; background: linear-gradient(90deg, var(--yellow), var(--logo-cyan)); z-index: 0; }
+.step { display: flex; flex-direction: column; align-items: center; text-align: center; position: relative; z-index: 1; padding: 0 12px; }
+.step-circle { width: 72px; height: 72px; border-radius: 50%; background: var(--dark2); border: 3px solid var(--yellow); display: flex; align-items: center; justify-content: center; font-family: var(--font-title); font-size: 28px; font-weight: 800; color: var(--yellow); margin-bottom: 20px; position: relative; z-index: 1; transition: background var(--transition), box-shadow var(--transition), transform var(--transition); }
+.step:hover .step-circle { background: var(--yellow); color: var(--dark); transform: scale(1.1); }
+.step h4 { font-family: var(--font-title); font-size: 15px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--white); margin-bottom: 6px; }
+.step p { font-size: 12.5px; color: var(--gray); line-height: 1.5; }
+
+/* ========== COTIZACION ========== */
+#cotizar { padding: 100px 0; background: linear-gradient(135deg, #030b14 0%, #061020 100%); position: relative; overflow: hidden; }
+#cotizar::before { content: ''; position: absolute; top: -150px; right: -150px; width: 400px; height: 400px; border-radius: 50%; background: radial-gradient(circle, rgba(245,166,35,0.06) 0%, transparent 70%); pointer-events: none; }
+.cotizar-inner { display: grid; grid-template-columns: 1fr 1.3fr; gap: 80px; align-items: start; }
+.cotizar-info h2 { font-family: var(--font-title); font-size: clamp(32px,4vw,50px); font-weight: 800; text-transform: uppercase; line-height: 1.1; margin-bottom: 16px; }
+.cotizar-info h2 span { color: var(--yellow); }
+.cotizar-info p { font-size: 15px; color: var(--gray); line-height: 1.75; margin-bottom: 32px; }
+.cotizar-features { display: flex; flex-direction: column; gap: 14px; }
+.cotizar-feat { display: flex; align-items: center; gap: 12px; font-size: 14px; color: rgba(255,255,255,0.8); text-decoration: none; }
+.cotizar-feat i { color: var(--yellow); font-size: 15px; flex-shrink: 0; }
+.quote-form { background: var(--card-bg); border: 1px solid var(--border); border-radius: var(--radius); padding: 40px; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.form-group { margin-bottom: 18px; }
+.form-group label { display: block; font-size: 13px; font-weight: 600; color: rgba(255,255,255,0.75); margin-bottom: 6px; letter-spacing: 0.5px; }
+.form-group label span { color: var(--yellow); margin-left: 2px; }
+.form-control { width: 100%; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.12); border-radius: var(--radius-sm); padding: 12px 16px; color: var(--white); font-size: 14px; transition: border-color var(--transition), box-shadow var(--transition), background var(--transition); appearance: none; }
+.form-control:focus { outline: none; border-color: var(--yellow); background: rgba(255,255,255,0.07); box-shadow: 0 0 0 3px rgba(245,166,35,0.12); }
+.form-control.error { border-color: #e74c3c; box-shadow: 0 0 0 3px rgba(231,76,60,0.12); }
+.form-control option { background: #1e1e1e; color: var(--white); }
+textarea.form-control { resize: vertical; min-height: 100px; }
+.form-actions { display: flex; gap: 12px; margin-top: 8px; flex-wrap: wrap; }
+.form-actions .btn { flex: 1; justify-content: center; min-width: 140px; }
+.form-success { display: none; background: rgba(39,174,96,0.1); border: 1px solid rgba(39,174,96,0.3); border-radius: var(--radius-sm); padding: 16px 20px; margin-top: 16px; color: #2ecc71; font-size: 14px; text-align: center; animation: fadeInUp 0.5s ease; }
+@keyframes fadeInUp { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+/* ========== FAQ ========== */
+#faq { padding: 100px 0; background: var(--dark3); }
+.faq-header { text-align: center; margin-bottom: 60px; }
+.faq-list { max-width: 780px; margin: 0 auto; display: flex; flex-direction: column; gap: 12px; }
+.faq-item { background: var(--card-bg); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; transition: border-color var(--transition); }
+.faq-item.open { border-color: rgba(245,166,35,0.3); }
+.faq-q { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 20px 24px; cursor: pointer; font-weight: 600; font-size: 15px; color: var(--white); transition: color var(--transition); }
+.faq-q:hover { color: var(--yellow); }
+.faq-q i { font-size: 14px; color: var(--yellow); transition: transform var(--transition); flex-shrink: 0; }
+.faq-item.open .faq-q i { transform: rotate(180deg); }
+.faq-a { max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.3s ease; }
+.faq-a-inner { padding: 0 24px 20px; font-size: 14.5px; color: var(--gray); line-height: 1.75; }
+.faq-item.open .faq-a { max-height: 300px; }
+
+/* ========== CONTACTO ========== */
+#contacto { padding: 100px 0; background: var(--dark2); }
+.contacto-header { text-align: center; margin-bottom: 60px; }
+.contacto-inner { display: grid; grid-template-columns: 1.2fr 1fr; gap: 60px; align-items: start; }
+.contacto-info { display: flex; flex-direction: column; gap: 28px; }
+.contact-item { display: flex; gap: 16px; align-items: flex-start; }
+.contact-icon { width: 48px; height: 48px; border-radius: var(--radius-sm); background: rgba(245,166,35,0.1); border: 1px solid rgba(245,166,35,0.2); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.contact-icon i { color: var(--yellow); font-size: 18px; }
+.contact-text h4 { font-family: var(--font-title); font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--yellow); margin-bottom: 4px; }
+.contact-text a, .contact-text p { font-size: 15px; color: rgba(255,255,255,0.8); line-height: 1.6; }
+.contact-text a:hover { color: var(--yellow); }
+.whatsapp-btn { display: inline-flex; align-items: center; gap: 10px; background: #25D366; color: var(--white); padding: 14px 28px; border-radius: var(--radius-sm); font-weight: 700; font-family: var(--font-title); font-size: 15px; letter-spacing: 1px; text-transform: uppercase; transition: background-color var(--transition), transform var(--transition), box-shadow var(--transition); margin-top: 8px; }
+.whatsapp-btn:hover { background: #1da851; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(37,211,102,0.3); }
+.map-container { border-radius: var(--radius); overflow: hidden; border: 1px solid var(--border); }
+.map-container iframe { width: 100%; height: 320px; border: none; display: block; }
+.contact-form-quick { background: var(--card-bg); border: 1px solid var(--border); border-radius: var(--radius); padding: 32px; }
+.contact-form-quick h3 { font-family: var(--font-title); font-size: 20px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--white); margin-bottom: 20px; }
+
+/* ========== BLOG ========== */
+#blog { padding: 100px 0; background: var(--dark3); }
+.blog-header { text-align: center; margin-bottom: 60px; }
+.blog-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.blog-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; transition: transform var(--transition), border-color var(--transition), box-shadow var(--transition); display: flex; flex-direction: column; }
+.blog-card:hover { transform: translateY(-4px); border-color: rgba(245,166,35,0.25); box-shadow: var(--shadow); }
+.blog-thumb { height: 180px; display: flex; align-items: center; justify-content: center; font-size: 52px; }
+.blog-thumb.t1 { background: linear-gradient(135deg, #1a2a0a, #2a4a10); }
+.blog-thumb.t2 { background: linear-gradient(135deg, #0a1a2e, #1a3a5e); }
+.blog-thumb.t3 { background: linear-gradient(135deg, #1a0a1a, #3a1a3a); }
+.blog-body { padding: 24px; flex: 1; display: flex; flex-direction: column; }
+.blog-cat { font-family: var(--font-title); font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--yellow); margin-bottom: 10px; }
+.blog-card h3 { font-family: var(--font-title); font-size: 18px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; color: var(--white); margin-bottom: 10px; line-height: 1.3; }
+.blog-card p { font-size: 13.5px; color: var(--gray); line-height: 1.65; flex: 1; }
+.blog-footer { padding: 0 24px 20px; display: flex; align-items: center; justify-content: space-between; margin-top: auto; }
+.blog-date { font-size: 12px; color: var(--gray2); }
+.blog-link { font-size: 13px; color: var(--yellow); font-weight: 600; display: flex; align-items: center; gap: 5px; transition: gap var(--transition); }
+.blog-card:hover .blog-link { gap: 8px; }
+
+/* ========== FOOTER ========== */
+#footer { background: #060606; border-top: 1px solid var(--border); padding: 60px 0 30px; }
+.footer-inner { display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 60px; margin-bottom: 40px; }
+.footer-brand { }
+.footer-logo { margin-bottom: 16px; }
+.footer-logo img { height: 56px; width: auto; filter: brightness(0) invert(1); opacity: 0.9; }
+.footer-brand p { font-size: 13.5px; color: var(--gray2); line-height: 1.7; max-width: 280px; }
+.footer-col h4 { font-family: var(--font-title); font-size: 14px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--yellow); margin-bottom: 16px; }
+.footer-col ul { display: flex; flex-direction: column; gap: 10px; }
+.footer-col ul li a { font-size: 14px; color: var(--gray2); transition: color var(--transition); }
+.footer-col ul li a:hover { color: var(--white); }
+.footer-col .contact-detail { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 10px; font-size: 14px; color: var(--gray2); }
+.footer-col .contact-detail i { color: var(--yellow); font-size: 13px; margin-top: 3px; flex-shrink: 0; }
+.footer-col .contact-detail a { color: var(--gray2); transition: color var(--transition); }
+.footer-col .contact-detail a:hover { color: var(--white); }
+.footer-bottom { border-top: 1px solid var(--border); padding-top: 24px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+.footer-bottom p { font-size: 13px; color: var(--gray2); }
+.footer-bottom span { color: var(--yellow); }
+
+/* ========== CHATBOT ========== */
+.chat-wrapper { position: fixed; bottom: 28px; right: 28px; z-index: 9000; }
+.chat-bubble-hint { position: absolute; bottom: 68px; right: 0; background: var(--white); color: var(--dark); padding: 10px 14px; border-radius: 12px 12px 0 12px; font-size: 13px; font-weight: 600; white-space: nowrap; box-shadow: 0 4px 20px rgba(0,0,0,0.2); animation: bounceHint 2s ease-in-out infinite; cursor: pointer; }
+.chat-bubble-hint::after { content: ''; position: absolute; bottom: -6px; right: 12px; width: 12px; height: 12px; background: var(--white); clip-path: polygon(0 0, 100% 0, 100% 100%); }
+@keyframes bounceHint { 0%,100%{ transform: translateY(0); } 50%{ transform: translateY(-5px); } }
+.chat-toggle { width: 60px; height: 60px; border-radius: 50%; background: linear-gradient(135deg, var(--logo-blue), var(--logo-cyan)); display: flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: 0 6px 24px rgba(0,180,216,0.4); transition: transform var(--transition), box-shadow var(--transition); border: none; position: relative; overflow: hidden; }
+.chat-toggle:hover { transform: scale(1.1); box-shadow: 0 8px 32px rgba(0,180,216,0.5); }
+.chat-toggle img { width: 36px; height: 36px; border-radius: 50%; object-fit: contain; background: white; padding: 2px; }
+.chat-status { position: absolute; top: 3px; right: 3px; width: 14px; height: 14px; border-radius: 50%; background: #2ecc71; border: 2px solid #060606; animation: pulse-dot 1.8s ease-in-out infinite; }
+@keyframes pulse-dot { 0%,100%{ transform: scale(1); opacity: 1; } 50%{ transform: scale(1.3); opacity: 0.8; } }
+.chat-window { position: absolute; bottom: 76px; right: 0; width: 330px; background: #141414; border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; box-shadow: 0 16px 48px rgba(0,0,0,0.5); will-change: transform, opacity;
+  display: none; flex-direction: column; overflow: hidden; max-height: 520px; }
+.chat-window.open { display: flex; animation: slideUp 0.3s ease; }
+@keyframes slideUp { from { opacity: 0; transform: translateY(20px) scale(0.95); } to { opacity: 1; transform: translateY(0) scale(1); } }
+.chat-head { background: linear-gradient(135deg, var(--logo-blue), var(--logo-blue2)); padding: 16px 18px; display: flex; align-items: center; gap: 12px; }
+.chat-head-avatar { width: 40px; height: 40px; border-radius: 50%; background: white; display: flex; align-items: center; justify-content: center; flex-shrink: 0; overflow: hidden; padding: 2px; }
+.chat-head-avatar img { width: 100%; height: 100%; object-fit: contain; }
+.chat-head-info h4 { font-weight: 700; font-size: 14px; color: var(--white); }
+.chat-head-info span { font-size: 12px; color: rgba(255,255,255,0.7); display: flex; align-items: center; gap: 5px; }
+.chat-head-info span::before { content: ''; width: 7px; height: 7px; border-radius: 50%; background: #2ecc71; display: inline-block; }
+.chat-close { margin-left: auto; color: rgba(255,255,255,0.7); cursor: pointer; padding: 4px; font-size: 16px; transition: color var(--transition); }
+.chat-close:hover { color: var(--white); }
+.chat-messages { flex: 1; overflow-y: auto; padding: 16px; display: flex; flex-direction: column; gap: 12px; min-height: 200px; max-height: 320px; }
+.chat-messages::-webkit-scrollbar { width: 4px; }
+.chat-messages::-webkit-scrollbar-track { background: transparent; }
+.chat-messages::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.15); border-radius: 2px; }
+.msg { max-width: 85%; font-size: 13.5px; line-height: 1.55; padding: 10px 14px; border-radius: 14px; }
+.msg.bot { background: rgba(255,255,255,0.08); color: rgba(255,255,255,0.9); border-radius: 4px 14px 14px 14px; align-self: flex-start; }
+.msg.user { background: var(--logo-blue2); color: var(--white); border-radius: 14px 4px 14px 14px; align-self: flex-end; }
+.typing { display: flex; gap: 5px; align-items: center; padding: 12px 14px; }
+.typing span { width: 7px; height: 7px; background: var(--gray); border-radius: 50%; animation: typing 1.2s ease-in-out infinite; }
+.typing span:nth-child(2) { animation-delay: 0.2s; }
+.typing span:nth-child(3) { animation-delay: 0.4s; }
+@keyframes typing { 0%,60%,100%{ transform: translateY(0); opacity: 0.5; } 30%{ transform: translateY(-6px); opacity: 1; } }
+.chat-input-wrap { padding: 12px 14px; border-top: 1px solid rgba(255,255,255,0.08); display: flex; gap: 8px; }
+.chat-input { flex: 1; background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12); border-radius: 24px; padding: 9px 16px; color: var(--white); font-size: 13.5px; outline: none; font-family: var(--font-body); transition: border-color var(--transition); }
+.chat-input:focus { border-color: var(--logo-cyan); }
+.chat-send { width: 36px; height: 36px; border-radius: 50%; background: var(--logo-cyan); border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; flex-shrink: 0; transition: background-color var(--transition), transform var(--transition); }
+.chat-send:hover { background: var(--logo-blue2); transform: scale(1.1); }
+.chat-send i { color: white; font-size: 13px; }
+.msg a.chat-btn { display: inline-flex; align-items: center; gap: 6px; margin-top: 8px; background: var(--yellow); color: var(--dark); padding: 7px 14px; border-radius: 6px; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; cursor: pointer; text-decoration: none; }
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 1100px) {
+  .servicios-grid { grid-template-columns: repeat(2,1fr); }
+  .ventajas-grid { grid-template-columns: repeat(2,1fr); }
+  .nosotros-inner { gap: 48px; }
+  .cotizar-inner { gap: 48px; }
+}
+@media (max-width: 992px) {
+  .nav-links, .nav-cta { display: none; }
+  .hamburger { display: flex; }
+  .nosotros-inner { grid-template-columns: 1fr; gap: 40px; }
+  .equipo-grid { grid-template-columns: 1fr; max-width: 500px; }
+  .proceso-steps { grid-template-columns: repeat(3,1fr); row-gap: 36px; }
+  .proceso-steps::before { display: none; }
+  .cotizar-inner { grid-template-columns: 1fr; }
+  .contacto-inner { grid-template-columns: 1fr; }
+  .footer-inner { grid-template-columns: 1fr 1fr; }
+  .blog-grid { grid-template-columns: repeat(2,1fr); }
+  .team-card { padding: 32px 28px; }
+  .section-tag { font-size: 11px; }
+}
+@media (max-width: 768px) {
+  section { padding: 64px 0; }
+  #inicio { padding: 100px 0 60px; }
+  .servicios-grid { grid-template-columns: 1fr; }
+  .ventajas-grid { grid-template-columns: 1fr 1fr; }
+  .hero-pillars { grid-template-columns: 1fr; gap: 10px; max-width: 280px; }
+  .proceso-steps { grid-template-columns: repeat(2,1fr); }
+  .form-row { grid-template-columns: 1fr; }
+  .form-actions { flex-direction: column; }
+  .footer-inner { grid-template-columns: 1fr; gap: 36px; }
+  .footer-bottom { flex-direction: column; text-align: center; }
+  .blog-grid { grid-template-columns: 1fr; }
+  .chat-window { width: 100vw; right: -28px; left: auto; border-radius: 16px 16px 0 0; bottom: 76px; max-height: 75vh; }
+}
+@media (max-width: 480px) {
+  section { padding: 44px 0; }
+  .equipo-grid { max-width: 100%; }
+  #footer { padding: 40px 0 24px; }
+  .ventajas-grid { grid-template-columns: 1fr; }
+  .proceso-steps { grid-template-columns: 1fr; }
+  .stats-grid { grid-template-columns: 1fr 1fr; }
+  .hero-btns { flex-direction: column; align-items: center; }
+  .container { padding: 0 16px; }
+  .service-card { padding: 28px 20px; }
+  .ventaja-card { padding: 28px 20px; }
+  .team-card { padding: 28px 20px; }
+  .stat-item { padding: 20px 16px; }
+  .mob-link { font-size: 22px; }
+  .section-title { font-size: clamp(26px, 8vw, 38px); }
+  .hero-title { font-size: clamp(32px, 9vw, 52px); }
+  h3 { font-size: 17px; }
+  .faq-question { padding: 18px 20px; font-size: 15px; }
+  .faq-answer { padding: 0 20px 18px; }
+  .btn { padding: 12px 20px; font-size: 14px; }
+}
+
+/* ========== MOBILE MENU LINKS ========== */
+.mob-link { color: var(--white); font-family: var(--font-title); font-size: 28px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; transition: color var(--transition); text-decoration: none; }
+.mob-link:hover { color: var(--yellow); }
+.mob-cta.mob-link { background: var(--yellow); color: var(--dark); padding: 14px 36px; border-radius: var(--radius-sm); font-size: 18px; }
+.mob-cta.mob-link:hover { background: var(--yellow-dark); color: var(--dark); }
+
+.form-group label span { color: var(--yellow); font-weight: 700; }
+
+.pillar-label { font-family: var(--font-title); font-size: 14px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--white); margin: 0; }
+.contact-heading { font-family: var(--font-title); font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--yellow); margin-bottom: 4px; }
+
+  /* ========== SCROLL TO TOP ========== */
+  #scrollTopBtn {
+    position: fixed;
+    bottom: 100px;
+    right: 28px;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: var(--yellow);
+    color: var(--dark);
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 8999;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+  }
+  #scrollTopBtn.visible { opacity: 1; transform: translateY(0); }
+  #scrollTopBtn:hover { background: var(--yellow-dark); transform: translateY(-3px); }
+
+</style>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0MjAgMjYwIj4KICA8ZGVmcz4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0ibGdMZWZ0IiB4MT0iMCUiIHkxPSIxMDAlIiB4Mj0iNjAlIiB5Mj0iMCUiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMDBiNGQ4Ii8+CiAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzFhM2E2ZSIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0ibGdSaWdodCIgeDE9IjQwJSIgeTE9IjAlIiB4Mj0iMTAwJSIgeTI9IjEwMCUiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMWEzYTZlIi8+CiAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzIxOTZjNCIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICA8L2RlZnM+CiAgPCEtLSBMZWZ0IGxlZyBvZiBBIC0tPgogIDxwYXRoIGQ9Ik04MCwyMDAgTDEzOCw1MiBRMTQ2LDI2IDE2MiwyNCBRMTc2LDI0IDE4Miw0NiIgc3Ryb2tlPSJ1cmwoI2xnTGVmdCkiIHN0cm9rZS13aWR0aD0iMjIiIGZpbGw9Im5vbmUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgogIDwhLS0gUmlnaHQgbGVnIG9mIEEgLS0+CiAgPHBhdGggZD0iTTE4Miw0NiBRMTg4LDI2IDIwMiwyNCBRMjE4LDI0IDIyNiw1MiBMMjg0LDIwMCIgc3Ryb2tlPSJ1cmwoI2xnUmlnaHQpIiBzdHJva2Utd2lkdGg9IjIyIiBmaWxsPSJub25lIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KICA8IS0tIEJvdHRvbSBsZWZ0IGN1cnZlIC0tPgogIDxwYXRoIGQ9Ik03NCwyMDAgUTc4LDIyNCAxMDAsMjI0IFExMTgsMjI0IDEyOCwyMDgiIHN0cm9rZT0iIzFhM2E2ZSIgc3Ryb2tlLXdpZHRoPSIyMiIgZmlsbD0ibm9uZSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CiAgPCEtLSBCb3R0b20gcmlnaHQgY3VydmUgLS0+CiAgPHBhdGggZD0iTTI0MCwyMDggUTI1MCwyMjQgMjY4LDIyNCBRMjkwLDIyNCAyOTQsMjAwIiBzdHJva2U9IiMyMTk2YzQiIHN0cm9rZS13aWR0aD0iMjIiIGZpbGw9Im5vbmUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgogIDwhLS0gVGVjaCBvdmVybGF5IGN1cnZlIC0gZnJvbSBsb3dlciBsZWZ0IHRvIHVwcGVyIHJpZ2h0IC0tPgogIDxwYXRoIGQ9Ik05NCwxNzIgUTE2MCwxMDUgMjIwLDYyIiBzdHJva2U9IiMwMGI0ZDgiIHN0cm9rZS13aWR0aD0iNi41IiBmaWxsPSJub25lIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KICA8IS0tIE5vZGUgaGV4YWdvbiBsZWZ0IC0tPgogIDxyZWN0IHg9Ijg1IiB5PSIxNjMiIHdpZHRoPSIxOCIgaGVpZ2h0PSIxOCIgcng9IjMiIGZpbGw9IiMxYTNhNmUiIHRyYW5zZm9ybT0icm90YXRlKDQ1IDk0IDE3MikiLz4KICA8IS0tIE5vZGUgY2lyY2xlIG1pZGRsZSAtLT4KICA8Y2lyY2xlIGN4PSIxNjAiIGN5PSIxMTMiIHI9IjgiIGZpbGw9IiMyMTk2YzQiLz4KICA8IS0tIE5vZGUgaGV4YWdvbiByaWdodCAtLT4KICA8cmVjdCB4PSIyMTAiIHk9IjUyIiB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHJ4PSI0IiBmaWxsPSIjMWEzYTZlIiB0cmFuc2Zvcm09InJvdGF0ZSg0NSAyMjAgNjIpIi8+CiAgPCEtLSBEZWNvcmF0aXZlIGRvdHMgLS0+CiAgPGNpcmNsZSBjeD0iMjM4IiBjeT0iNTYiIHI9IjYiIGZpbGw9IiMwMGI0ZDgiIG9wYWNpdHk9IjAuOSIvPgogIDxjaXJjbGUgY3g9IjI1MiIgY3k9IjcyIiByPSI0LjUiIGZpbGw9IiMwMGI0ZDgiIG9wYWNpdHk9IjAuNzUiLz4KICA8Y2lyY2xlIGN4PSIyNDQiIGN5PSI4OCIgcj0iMy41IiBmaWxsPSIjMjE5NmM0IiBvcGFjaXR5PSIwLjY1Ii8+CiAgPGNpcmNsZSBjeD0iMjYyIiBjeT0iNjAiIHI9IjMiIGZpbGw9IiMwMGI0ZDgiIG9wYWNpdHk9IjAuNTUiLz4KICA8IS0tIEFEQU5DQVIgdGV4dCAtLT4KICA8dGV4dCB4PSIxODQiIHk9IjIzOCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsIEJsYWNrLCBJbXBhY3QsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iNDQiIGZvbnQtd2VpZ2h0PSI5MDAiIGZpbGw9IiMxYTNhNmUiIGxldHRlci1zcGFjaW5nPSI1Ij5BREFOQ0FSPC90ZXh0PgogIDwhLS0gU2VwYXJhdG9yIGxpbmUgLS0+CiAgPGxpbmUgeDE9IjEwMCIgeTE9IjI0NSIgeDI9IjI2OCIgeTI9IjI0NSIgc3Ryb2tlPSIjMjE5NmM0IiBzdHJva2Utd2lkdGg9IjEuNSIvPgogIDwhLS0gU0VSVklDSU9TIElUIHRleHQgLS0+CiAgPHRleHQgeD0iMTg0IiB5PSIyNTgiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9IjYwMCIgZmlsbD0iIzAwYjRkOCIgbGV0dGVyLXNwYWNpbmc9IjciPlNFUlZJQ0lPUyBJVDwvdGV4dD4KPC9zdmc+Cg==">
+<link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg==">
+<meta name="theme-color" content="#0d0d0d">
+<link rel="canonical" href="https://adancar.cl/">
+<meta property="og:image" content="https://adancar.cl/og-image.png">
+<meta property="og:url" content="https://adancar.cl/">
+<meta property="og:site_name" content="Adancar - Construcción Integral">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Adancar - Construcción Integral | San Antonio, Chile">
+<meta name="twitter:description" content="Construimos desde los cimientos hasta la última conexión. Construcción, Telecomunicaciones y Seguridad.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Adancar - Construcción Integral",
+  "description": "Empresa de construcción integral, telecomunicaciones y CCTV en San Antonio, V Región, Chile.",
+  "url": "https://adancar.cl",
+  "telephone": ["+56976491238", "+56957598100"],
+  "email": "adancar.contacto@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "El Alba 927",
+    "addressLocality": "San Antonio",
+    "addressRegion": "V Región de Valparaíso",
+    "postalCode": "2680000",
+    "addressCountry": "CL"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": -33.5935,
+    "longitude": -71.6092
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+    "opens": "08:00",
+    "closes": "18:00"
+  },
+  "areaServed": {
+    "@type": "AdministrativeArea",
+    "name": "V Región de Valparaíso, Chile"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Servicios Adancar",
+    "itemListElement": [
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Obra Gruesa"}},
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Telecomunicaciones"}},
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"CCTV y Seguridad"}},
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Instalaciones"}},
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Terminaciones"}}
+    ]
+  },
+  "sameAs": []
+}
+</script>
+</head>
+<body>
+
+<a href="#inicio" class="skip-link">Saltar al contenido principal</a>
+
+<!-- ========== NAV ========== -->
+<nav id="nav" role="navigation" aria-label="Navegación principal">
+  <div class="container nav-inner">
+    <a href="#inicio" class="nav-logo" aria-label="Adancar - Inicio">
+      <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0MjAgMjYwIj4KICA8ZGVmcz4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0ibGdMZWZ0IiB4MT0iMCUiIHkxPSIxMDAlIiB4Mj0iNjAlIiB5Mj0iMCUiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMDBiNGQ4Ii8+CiAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzFhM2E2ZSIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0ibGdSaWdodCIgeDE9IjQwJSIgeTE9IjAlIiB4Mj0iMTAwJSIgeTI9IjEwMCUiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMWEzYTZlIi8+CiAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzIxOTZjNCIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICA8L2RlZnM+CiAgPCEtLSBMZWZ0IGxlZyBvZiBBIC0tPgogIDxwYXRoIGQ9Ik04MCwyMDAgTDEzOCw1MiBRMTQ2LDI2IDE2MiwyNCBRMTc2LDI0IDE4Miw0NiIgc3Ryb2tlPSJ1cmwoI2xnTGVmdCkiIHN0cm9rZS13aWR0aD0iMjIiIGZpbGw9Im5vbmUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgogIDwhLS0gUmlnaHQgbGVnIG9mIEEgLS0+CiAgPHBhdGggZD0iTTE4Miw0NiBRMTg4LDI2IDIwMiwyNCBRMjE4LDI0IDIyNiw1MiBMMjg0LDIwMCIgc3Ryb2tlPSJ1cmwoI2xnUmlnaHQpIiBzdHJva2Utd2lkdGg9IjIyIiBmaWxsPSJub25lIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KICA8IS0tIEJvdHRvbSBsZWZ0IGN1cnZlIC0tPgogIDxwYXRoIGQ9Ik03NCwyMDAgUTc4LDIyNCAxMDAsMjI0IFExMTgsMjI0IDEyOCwyMDgiIHN0cm9rZT0iIzFhM2E2ZSIgc3Ryb2tlLXdpZHRoPSIyMiIgZmlsbD0ibm9uZSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CiAgPCEtLSBCb3R0b20gcmlnaHQgY3VydmUgLS0+CiAgPHBhdGggZD0iTTI0MCwyMDggUTI1MCwyMjQgMjY4LDIyNCBRMjkwLDIyNCAyOTQsMjAwIiBzdHJva2U9IiMyMTk2YzQiIHN0cm9rZS13aWR0aD0iMjIiIGZpbGw9Im5vbmUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgogIDwhLS0gVGVjaCBvdmVybGF5IGN1cnZlIC0gZnJvbSBsb3dlciBsZWZ0IHRvIHVwcGVyIHJpZ2h0IC0tPgogIDxwYXRoIGQ9Ik05NCwxNzIgUTE2MCwxMDUgMjIwLDYyIiBzdHJva2U9IiMwMGI0ZDgiIHN0cm9rZS13aWR0aD0iNi41IiBmaWxsPSJub25lIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KICA8IS0tIE5vZGUgaGV4YWdvbiBsZWZ0IC0tPgogIDxyZWN0IHg9Ijg1IiB5PSIxNjMiIHdpZHRoPSIxOCIgaGVpZ2h0PSIxOCIgcng9IjMiIGZpbGw9IiMxYTNhNmUiIHRyYW5zZm9ybT0icm90YXRlKDQ1IDk0IDE3MikiLz4KICA8IS0tIE5vZGUgY2lyY2xlIG1pZGRsZSAtLT4KICA8Y2lyY2xlIGN4PSIxNjAiIGN5PSIxMTMiIHI9IjgiIGZpbGw9IiMyMTk2YzQiLz4KICA8IS0tIE5vZGUgaGV4YWdvbiByaWdodCAtLT4KICA8cmVjdCB4PSIyMTAiIHk9IjUyIiB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHJ4PSI0IiBmaWxsPSIjMWEzYTZlIiB0cmFuc2Zvcm09InJvdGF0ZSg0NSAyMjAgNjIpIi8+CiAgPCEtLSBEZWNvcmF0aXZlIGRvdHMgLS0+CiAgPGNpcmNsZSBjeD0iMjM4IiBjeT0iNTYiIHI9IjYiIGZpbGw9IiMwMGI0ZDgiIG9wYWNpdHk9IjAuOSIvPgogIDxjaXJjbGUgY3g9IjI1MiIgY3k9IjcyIiByPSI0LjUiIGZpbGw9IiMwMGI0ZDgiIG9wYWNpdHk9IjAuNzUiLz4KICA8Y2lyY2xlIGN4PSIyNDQiIGN5PSI4OCIgcj0iMy41IiBmaWxsPSIjMjE5NmM0IiBvcGFjaXR5PSIwLjY1Ii8+CiAgPGNpcmNsZSBjeD0iMjYyIiBjeT0iNjAiIHI9IjMiIGZpbGw9IiMwMGI0ZDgiIG9wYWNpdHk9IjAuNTUiLz4KICA8IS0tIEFEQU5DQVIgdGV4dCAtLT4KICA8dGV4dCB4PSIxODQiIHk9IjIzOCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsIEJsYWNrLCBJbXBhY3QsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iNDQiIGZvbnQtd2VpZ2h0PSI5MDAiIGZpbGw9IiMxYTNhNmUiIGxldHRlci1zcGFjaW5nPSI1Ij5BREFOQ0FSPC90ZXh0PgogIDwhLS0gU2VwYXJhdG9yIGxpbmUgLS0+CiAgPGxpbmUgeDE9IjEwMCIgeTE9IjI0NSIgeDI9IjI2OCIgeTI9IjI0NSIgc3Ryb2tlPSIjMjE5NmM0IiBzdHJva2Utd2lkdGg9IjEuNSIvPgogIDwhLS0gU0VSVklDSU9TIElUIHRleHQgLS0+CiAgPHRleHQgeD0iMTg0IiB5PSIyNTgiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9IjYwMCIgZmlsbD0iIzAwYjRkOCIgbGV0dGVyLXNwYWNpbmc9IjciPlNFUlZJQ0lPUyBJVDwvdGV4dD4KPC9zdmc+Cg==" alt="Adancar Servicios IT" height="48">
+    </a>
+    <div class="nav-links">
+      <a href="#inicio">Inicio</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#equipo">Equipo</a>
+      <a href="#cotizar">Cotizar</a>
+      <a href="#contacto">Contacto</a>
+      <!-- PORTAFOLIO-NAV: Descomentar cuando haya proyectos -->
+      <!-- <a href="#portafolio">Portafolio</a> -->
+    </div>
+    <a href="#cotizar" class="nav-cta" aria-label="Solicitar presupuesto">Presupuesto</a>
+    <button type="button" class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobileMenu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Menú de navegación">
+  <a href="#inicio" class="mob-link">Inicio</a>
+  <a href="#servicios" class="mob-link">Servicios</a>
+  <a href="#nosotros" class="mob-link">Nosotros</a>
+  <a href="#equipo" class="mob-link">Equipo</a>
+  <a href="#cotizar" class="mob-link">Cotizar</a>
+  <a href="#contacto" class="mob-link">Contacto</a>
+  <!-- PORTAFOLIO-MENU: Descomentar cuando haya proyectos -->
+  <!-- <a href="#portafolio" class="mob-link">Portafolio</a> -->
+  <a href="#cotizar" class="mob-cta mob-link">Solicitar Presupuesto</a>
+</div>
+
+<main id="main-content">
+<!-- ========== HERO ========== -->
+<section id="inicio" aria-label="Sección principal">
+  <svg class="hero-pattern" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <defs>
+      <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
+        <path d="M 60 0 L 0 0 0 60" fill="none" stroke="rgba(245,166,35,0.06)" stroke-width="1"/>
+      </pattern>
+    </defs>
+    <rect width="1440" height="900" fill="url(#grid)"/>
+    <circle cx="200" cy="150" r="180" fill="rgba(245,166,35,0.03)"/>
+    <circle cx="1300" cy="700" r="220" fill="rgba(33,150,196,0.04)"/>
+    <polygon points="800,50 950,200 650,200" fill="rgba(245,166,35,0.04)" stroke="rgba(245,166,35,0.08)" stroke-width="1"/>
+    <polygon points="100,600 200,500 300,600" fill="rgba(0,180,216,0.04)" stroke="rgba(0,180,216,0.08)" stroke-width="1"/>
+    <line x1="0" y1="450" x2="300" y2="250" stroke="rgba(245,166,35,0.05)" stroke-width="1.5"/>
+    <line x1="1200" y1="100" x2="1440" y2="300" stroke="rgba(33,150,196,0.06)" stroke-width="1.5"/>
+  </svg>
+  <div class="container">
+    <div class="hero-content fade-in">
+      <div class="hero-badge">
+        <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+        Construcción Integral · San Antonio, Chile
+      </div>
+      <h1 class="hero-title">
+        Construimos desde los<br><span>cimientos</span> hasta<br>la última conexión
+      </h1>
+      <p class="hero-subtitle">
+        Un equipo que construye el edificio, lo conecta y lo asegura. Obra gruesa, telecomunicaciones y CCTV en un solo contrato. Sin subcontratos, sin costos ocultos.
+      </p>
+      <div class="hero-btns">
+        <a href="#cotizar" class="btn btn-primary">
+          <i class="fas fa-file-invoice" aria-hidden="true"></i>
+          Solicitar Presupuesto
+        </a>
+        <a href="#servicios" class="btn btn-outline">
+          <i class="fas fa-arrow-down" aria-hidden="true"></i>
+          Ver Servicios
+        </a>
+      </div>
+      <div class="hero-pillars" role="list">
+        <div class="pillar" role="listitem">
+          <i class="fas fa-shield-halved" aria-hidden="true"></i>
+          <p class="pillar-label">Seguridad</p>
+        </div>
+        <div class="pillar" role="listitem">
+          <i class="fas fa-medal" aria-hidden="true"></i>
+          <p class="pillar-label">Calidad</p>
+        </div>
+        <div class="pillar" role="listitem">
+          <i class="fas fa-clock" aria-hidden="true"></i>
+          <p class="pillar-label">Plazos</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== SERVICIOS ========== -->
+<section id="servicios" aria-label="Nuestros servicios">
+  <div class="container">
+    <div class="servicios-header fade-in">
+      <div class="section-badge">Lo que hacemos</div>
+      <h2 class="section-title">Nuestros Servicios</h2>
+      <p class="section-subtitle">Soluciones integrales de construcción, conectividad y seguridad bajo un mismo techo y un mismo equipo.</p>
+    </div>
+    <div class="servicios-grid">
+      <article class="service-card fade-in" role="article">
+        <div class="service-icon"><i class="fas fa-building" aria-hidden="true"></i></div>
+        <h3>Obra Gruesa</h3>
+        <p>Cimentaciones, estructuras y albanilería de alta calidad. Ejecutamos desde los fundamentos garantizando solidez y cumplimiento normativo.</p>
+      </article>
+      <article class="service-card fade-in" role="article">
+        <div class="service-icon"><i class="fas fa-network-wired" aria-hidden="true"></i></div>
+        <h3>Telecomunicaciones</h3>
+        <p>Instalación de fibra óptica, torres de comunicación y redes de datos empresariales. Conectividad de alta velocidad y confiabilidad.</p>
+      </article>
+      <article class="service-card fade-in" role="article">
+        <div class="service-icon"><i class="fas fa-video" aria-hidden="true"></i></div>
+        <h3>CCTV y Seguridad</h3>
+        <p>Diseño e instalación de sistemas de videovigilancia IP y analógicos. Empresa instaladora certificada.</p>
+        <span class="cert-badge"><i class="fas fa-certificate" aria-hidden="true"></i> Certificada DAWA</span>
+      </article>
+      <article class="service-card fade-in" role="article">
+        <div class="service-icon"><i class="fas fa-bolt" aria-hidden="true"></i></div>
+        <h3>Instalaciones</h3>
+        <p>Instalaciones eléctricas, sanitarias y de climatización. Cumplimiento de normativas vigentes y materiales certificados.</p>
+      </article>
+      <article class="service-card fade-in" role="article">
+        <div class="service-icon"><i class="fas fa-paint-roller" aria-hidden="true"></i></div>
+        <h3>Terminaciones</h3>
+        <p>Pintura, revestimientos, pisos y carpintería de terminación. Acabados profesionales que dan vida a cada espacio.</p>
+      </article>
+      <article class="service-card fade-in" role="article">
+        <div class="service-icon"><i class="fas fa-screwdriver-wrench" aria-hidden="true"></i></div>
+        <h3>Proyectos Especiales</h3>
+        <p>Reformas integrales y proyectos a medida. Adaptamos nuestra capacidad técnica a los requerimientos específicos de cada cliente.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ========== POR QUE ELEGIRNOS ========== -->
+<section id="ventajas" aria-label="Por qué elegirnos">
+  <div class="container">
+    <div class="ventajas-header fade-in">
+      <div class="section-badge">Nuestras ventajas</div>
+      <h2 class="section-title">¿Por qué Adancar?</h2>
+      <p class="section-subtitle">Combinamos experiencia técnica en construcción y tecnología para ofrecerte una solución completa, transparente y certificada.</p>
+    </div>
+    <div class="ventajas-grid">
+      <div class="ventaja-card fade-in">
+        <div class="ventaja-icon"><i class="fas fa-users-gear" aria-hidden="true"></i></div>
+        <div class="ventaja-num">2</div>
+        <h3>Equipo Dual</h3>
+        <p>Constructores y tecnólogos en un mismo equipo. Sin subcontratistas, sin intermediarios, sin sorpresas.</p>
+      </div>
+      <div class="ventaja-card fade-in">
+        <div class="ventaja-icon"><i class="fas fa-hourglass-half" aria-hidden="true"></i></div>
+        <div class="ventaja-num">24h</div>
+        <h3>Cotización Rápida</h3>
+        <p>Respondemos tu solicitud de presupuesto en menos de 24 horas hábiles con todos los detalles del proyecto.</p>
+      </div>
+      <div class="ventaja-card fade-in">
+        <div class="ventaja-icon"><i class="fas fa-hand-holding-dollar" aria-hidden="true"></i></div>
+        <div class="ventaja-num">0</div>
+        <h3>Costos Ocultos</h3>
+        <p>Presupuesto transparente y detallado. Lo que cotizamos es lo que pagas. Nada más, nada menos.</p>
+      </div>
+      <div class="ventaja-card fade-in">
+        <div class="ventaja-icon"><i class="fas fa-certificate" aria-hidden="true"></i></div>
+        <div class="ventaja-num"><i class="fas fa-star" style="font-size:40px" aria-hidden="true"></i></div>
+        <h3>Certificados</h3>
+        <p>DAWA, Ingeniería de Redes, Ciberseguridad y Construcción. Acreditaciones que respaldan nuestra capacidad técnica.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== QUIENES SOMOS ========== -->
+<section id="nosotros" aria-label="Quiénes somos">
+  <div class="container">
+    <div class="nosotros-inner">
+      <div class="nosotros-text fade-in">
+        <div class="section-badge">Nuestra empresa</div>
+        <h2 class="section-title">Quiénes Somos</h2>
+        <p>Adancar es una empresa de construcción integral con sede en San Antonio, V Región, Chile. Nacimos con un propósito claro: eliminar la fragmentación en los proyectos de edificación y tecnología.</p>
+        <p>Mientras otros contratan por separado a constructoras, empresas de telecomunicaciones y especialistas en seguridad, nosotros llegamos como un solo equipo con un solo contrato.</p>
+        <div class="nosotros-highlight">
+          "Un equipo que construye el edificio, lo conecta y lo asegura — desde los cimientos hasta la última cámara."
+        </div>
+        <p>Nuestra misión es entregar proyectos completos con calidad técnica, plazos reales y comunicación directa. Cada proyecto es abordado con seriedad, capacidad certificada y experiencia acreditada en cada área.</p>
+        <a href="#cotizar" class="btn btn-primary" style="margin-top:8px;">
+          <i class="fas fa-paper-plane" aria-hidden="true"></i>
+          Trabajemos juntos
+        </a>
+      </div>
+      <div class="stats-grid fade-in">
+        <div class="stat-item">
+          <div class="stat-num">6</div>
+          <div class="stat-label">Especialidades</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">2</div>
+          <div class="stat-label">Socios Fundadores</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">24h</div>
+          <div class="stat-label">Tiempo de Respuesta</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">100%</div>
+          <div class="stat-label">Compromiso</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== EQUIPO ========== -->
+<section id="equipo" aria-label="Nuestro equipo">
+  <div class="container">
+    <div class="equipo-header fade-in">
+      <div class="section-badge">Las personas detrás</div>
+      <h2 class="section-title">Equipo Fundador</h2>
+      <p class="section-subtitle" style="margin:0 auto;">Dos especialistas con trayectorias independientes acreditadas, unidos para cubrir el ciclo constructivo completo.</p>
+    </div>
+    <div class="equipo-grid">
+      <article class="team-card fade-in" role="article">
+        <div class="team-area">Co-Fundador · Área Tecnológica</div>
+        <div class="team-avatar" aria-hidden="true">ST</div>
+        <h3>Socio Tecnológico</h3>
+        <div class="team-role">Redes · Telecomunicaciones · CCTV y Seguridad</div>
+        <p class="team-desc">Especialista en infraestructura de redes, telecomunicaciones y sistemas de seguridad. Certificado como empresa instaladora profesional de sistemas CCTV (DAWA), con formación avanzada en ciberseguridad y diseño de redes. Experiencia real en proyectos de conectividad y videovigilancia.</p>
+        <div class="cert-list" role="list">
+          <div class="cert-item" role="listitem"><i class="fas fa-award" aria-hidden="true"></i> DAWA — Empresa Instaladora Certificada CCTV</div>
+          <div class="cert-item" role="listitem"><i class="fas fa-award" aria-hidden="true"></i> Ingeniería en Redes</div>
+          <div class="cert-item" role="listitem"><i class="fas fa-award" aria-hidden="true"></i> Diplomado en Ciberseguridad</div>
+          <div class="cert-item" role="listitem"><i class="fas fa-award" aria-hidden="true"></i> Diplomado en Redes</div>
+        </div>
+      </article>
+      <article class="team-card fade-in" role="article">
+        <div class="team-area">Co-Fundador · Área Construcción</div>
+        <div class="team-avatar" aria-hidden="true">SC</div>
+        <h3>Socio Constructor</h3>
+        <div class="team-role">Obra Gruesa · Instalaciones · Terminaciones</div>
+        <p class="team-desc">Especialista en construcción integral con vasta experiencia en obra gruesa, instalaciones y terminaciones. Garantiza calidad técnica y cumplimiento de plazos en cada etapa del proyecto, desde los cimientos hasta los acabados finales.</p>
+        <div class="cert-list" role="list">
+          <div class="cert-item" role="listitem"><i class="fas fa-award" aria-hidden="true"></i> Certificaciones en Construcción</div>
+          <div class="cert-item" role="listitem"><i class="fas fa-award" aria-hidden="true"></i> Especialista en Obra Gruesa</div>
+          <div class="cert-item" role="listitem"><i class="fas fa-award" aria-hidden="true"></i> Instalaciones y Terminaciones</div>
+        </div>
+      </article>
+    </div>
+    <div class="team-note fade-in">
+      <p><strong>Empresa de reciente formación.</strong> Cada socio cuenta con experiencia profesional independiente acreditada en su área antes de la asociación.</p>
+    </div>
+    <p class="team-closeline fade-in">Juntos cubrimos el 100% del ciclo constructivo</p>
+  </div>
+</section>
+
+<!-- ========== PROCESO ========== -->
+<section id="proceso" aria-label="Nuestro proceso">
+  <div class="container">
+    <div class="proceso-header fade-in">
+      <div class="section-badge">Cómo trabajamos</div>
+      <h2 class="section-title">Nuestro Proceso</h2>
+      <p class="section-subtitle" style="margin:0 auto 0;">Simple, transparente y orientado a resultados.</p>
+    </div>
+    <div class="proceso-steps fade-in" role="list">
+      <div class="step" role="listitem">
+        <div class="step-circle" aria-hidden="true">1</div>
+        <h3>Contacto</h4>
+        <p>Nos escribes por WhatsApp, email o formulario</p>
+      </div>
+      <div class="step" role="listitem">
+        <div class="step-circle" aria-hidden="true">2</div>
+        <h3>Cotización</h4>
+        <p>Presupuesto detallado en menos de 24 horas</p>
+      </div>
+      <div class="step" role="listitem">
+        <div class="step-circle" aria-hidden="true">3</div>
+        <h3>Planificación</h4>
+        <p>Definimos alcance, plazos y materiales juntos</p>
+      </div>
+      <div class="step" role="listitem">
+        <div class="step-circle" aria-hidden="true">4</div>
+        <h3>Ejecución</h4>
+        <p>Trabajamos con seguimiento permanente y comunicación directa</p>
+      </div>
+      <div class="step" role="listitem">
+        <div class="step-circle" aria-hidden="true">5</div>
+        <h3>Entrega</h4>
+        <p>Proyecto terminado con garantía en mano de obra</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PORTAFOLIO — Seccion comentada. Para activar: descomentar este bloque y los links PORTAFOLIO-NAV / PORTAFOLIO-MENU -->
+<!--
+<section id="portafolio" aria-label="Portafolio de proyectos">
+  <div class="container">
+    <div class="fade-in" style="text-align:center;margin-bottom:60px;">
+      <div class="section-badge">Nuestros trabajos</div>
+      <h2 class="section-title">Portafolio</h2>
+      <p class="section-subtitle" style="margin:0 auto;">Proyectos realizados que demuestran nuestra capacidad técnica.</p>
+    </div>
+    <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-bottom:40px;" role="tablist" aria-label="Filtros de portafolio">
+      <button class="port-filter active" data-filter="all" role="tab">Todos</button>
+      <button class="port-filter" data-filter="obra" role="tab">Obra Gruesa</button>
+      <button class="port-filter" data-filter="telco" role="tab">Telecomunicaciones</button>
+      <button class="port-filter" data-filter="cctv" role="tab">CCTV</button>
+      <button class="port-filter" data-filter="instalaciones" role="tab">Instalaciones</button>
+      <button class="port-filter" data-filter="terminaciones" role="tab">Terminaciones</button>
+    </div>
+    <div id="portGrid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;">
+      PLANTILLA DE PROYECTO:
+      <div class="pod" data-cat="obra">
+        <div class="port-img">
+          <img src="ruta/foto.jpg" alt="Nombre del proyecto">
+        </div>
+        <div class="port-info">
+          <div class="port-tag">Obra Gruesa</div>
+          <div class="port-name">Nombre del Proyecto</div>
+          <div class="port-lugar">San Antonio · 2025</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+-->
+
+<!-- ========== COTIZACION ========== -->
+<section id="cotizar" aria-label="Formulario de cotización">
+  <div class="container">
+    <div class="cotizar-inner">
+      <div class="cotizar-info fade-in">
+        <div class="section-badge">Presupuesto sin costo</div>
+        <h2>Solicita tu <span>Cotización</span><br>Hoy</h2>
+        <p>Completa el formulario y te respondemos en menos de 24 horas con un presupuesto detallado y sin compromisos.</p>
+        <div class="cotizar-features">
+          <div class="cotizar-feat"><i class="fas fa-check-circle" aria-hidden="true"></i> Sin costo ni compromiso</div>
+          <div class="cotizar-feat"><i class="fas fa-check-circle" aria-hidden="true"></i> Respuesta en menos de 24 horas</div>
+          <div class="cotizar-feat"><i class="fas fa-check-circle" aria-hidden="true"></i> Presupuesto transparente y detallado</div>
+          <div class="cotizar-feat"><i class="fas fa-check-circle" aria-hidden="true"></i> Un solo contrato para todo el proyecto</div>
+        </div>
+        <div style="margin-top:32px;display:flex;flex-direction:column;gap:12px;">
+          <a href="tel:+56976491238" class="cotizar-feat" style="color:rgba(255,255,255,0.8);font-size:15px;text-decoration:none;">
+            <i class="fas fa-phone" style="color:var(--yellow)"></i> +56 9 7649 1238
+          </a>
+          <a href="tel:+56957598100" class="cotizar-feat" style="color:rgba(255,255,255,0.8);font-size:15px;text-decoration:none;">
+            <i class="fas fa-phone" style="color:var(--yellow)"></i> +56 9 5759 8100
+          </a>
+          <a href="mailto:adancar.contacto@gmail.com" class="cotizar-feat" style="color:rgba(255,255,255,0.8);font-size:15px;text-decoration:none;">
+            <i class="fas fa-envelope" style="color:var(--yellow)"></i> adancar.contacto@gmail.com
+          </a>
+        </div>
+      </div>
+      <div class="quote-form fade-in" role="form" aria-label="Formulario de cotización">
+        <form id="quoteForm" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="q_nombre">Nombre completo<span aria-hidden="true">*</span></label>
+              <input type="text" id="q_nombre" class="form-control" placeholder="Tu nombre completo" autocomplete="name" required aria-required="true">
+            </div>
+            <div class="form-group">
+              <label for="q_telefono">Teléfono<span aria-hidden="true">*</span></label>
+              <input type="tel" id="q_telefono" class="form-control" placeholder="+56 9 XXXX XXXX" autocomplete="tel" required aria-required="true">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="q_email">Email<span aria-hidden="true">*</span></label>
+            <input type="email" id="q_email" class="form-control" placeholder="tucorreo@email.com" autocomplete="email" required aria-required="true">
+          </div>
+          <div class="form-group">
+            <label for="q_tipo">Tipo de proyecto<span aria-hidden="true">*</span></label>
+            <select id="q_tipo" class="form-control" required aria-required="true">
+              <option value="">Selecciona un tipo...</option>
+              <option value="Obra Gruesa">Obra Gruesa</option>
+              <option value="Telecomunicaciones">Telecomunicaciones</option>
+              <option value="CCTV y Seguridad">CCTV y Seguridad</option>
+              <option value="Instalaciones">Instalaciones eléctricas / sanitarias</option>
+              <option value="Terminaciones">Terminaciones</option>
+              <option value="Proyecto Integral">Proyecto Integral (varios servicios)</option>
+              <option value="Otro">Otro</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="q_desc">Descripción del proyecto</label>
+            <textarea id="q_desc" class="form-control" placeholder="Cuéntanos brevemente qué necesitas..." rows="3"></textarea>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="q_region">Región / Comuna</label>
+              <input type="text" id="q_region" class="form-control" placeholder="Ej: San Antonio, V Región" autocomplete="address-level2">
+            </div>
+            <div class="form-group">
+              <label for="q_plazo">Plazo estimado</label>
+              <select id="q_plazo" class="form-control">
+                <option value="">Selecciona...</option>
+                <option value="Urgente (menos de 1 mes)">Urgente (menos de 1 mes)</option>
+                <option value="1-3 meses">1-3 meses</option>
+                <option value="3-6 meses">3-6 meses</option>
+                <option value="Más de 6 meses">Más de 6 meses</option>
+                <option value="Por definir">Por definir</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="q_presupuesto">Presupuesto aproximado</label>
+            <select id="q_presupuesto" class="form-control">
+              <option value="">Selecciona rango...</option>
+              <option value="Menos de $500.000">Menos de $500.000</option>
+              <option value="$500.000 - $2.000.000">$500.000 - $2.000.000</option>
+              <option value="$2.000.000 - $10.000.000">$2.000.000 - $10.000.000</option>
+              <option value="Más de $10.000.000">Más de $10.000.000</option>
+              <option value="Por definir">Por definir</option>
+            </select>
+          </div>
+          <div class="form-actions">
+            <button type="button" class="btn btn-primary" id="btnWhatsApp">
+              <i class="fab fa-whatsapp" aria-hidden="true"></i> WhatsApp
+            </button>
+            <button type="button" class="btn btn-outline" id="btnEmail">
+              <i class="fas fa-envelope" aria-hidden="true"></i> Enviar Email
+            </button>
+          </div>
+          <div class="form-success" id="formSuccess" role="alert" aria-live="polite">
+            <i class="fas fa-check-circle" aria-hidden="true"></i> ¡Solicitud enviada! Te contactaremos en menos de 24 horas.
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FAQ ========== -->
+<section id="faq" aria-label="Preguntas frecuentes">
+  <div class="container">
+    <div class="faq-header fade-in">
+      <div class="section-badge">Dudas comunes</div>
+      <h2 class="section-title">Preguntas Frecuentes</h2>
+    </div>
+    <div class="faq-list fade-in" role="list">
+      <div class="faq-item" role="listitem">
+        <div class="faq-q" role="button" tabindex="0" aria-expanded="false">
+          ¿En qué zonas trabajan?
+          <i class="fas fa-chevron-down" aria-hidden="true"></i>
+        </div>
+        <div class="faq-a" role="region"><div class="faq-a-inner">Tenemos base en San Antonio y cubrimos toda la V Región de Valparaíso. Para proyectos fuera de esta zona, evaluamos según alcance y características. Contáctanos y lo conversamos.</div></div>
+      </div>
+      <div class="faq-item" role="listitem">
+        <div class="faq-q" role="button" tabindex="0" aria-expanded="false">
+          ¿Cuánto demora la cotización?
+          <i class="fas fa-chevron-down" aria-hidden="true"></i>
+        </div>
+        <div class="faq-a" role="region"><div class="faq-a-inner">Respondemos todas las solicitudes de cotización en menos de 24 horas hábiles. El presupuesto incluye desglose detallado de materiales, mano de obra y plazos estimados.</div></div>
+      </div>
+      <div class="faq-item" role="listitem">
+        <div class="faq-q" role="button" tabindex="0" aria-expanded="false">
+          ¿Trabajan en proyectos residenciales y comerciales?
+          <i class="fas fa-chevron-down" aria-hidden="true"></i>
+        </div>
+        <div class="faq-a" role="region"><div class="faq-a-inner">Sí, atendemos ambos tipos de proyectos. Desde remodelaciones de viviendas hasta instalaciones en locales comerciales, empresas e infraestructura. Cada proyecto es evaluado y cotizado de forma personalizada.</div></div>
+      </div>
+      <div class="faq-item" role="listitem">
+        <div class="faq-q" role="button" tabindex="0" aria-expanded="false">
+          ¿Ofrecen garantía en los trabajos?
+          <i class="fas fa-chevron-down" aria-hidden="true"></i>
+        </div>
+        <div class="faq-a" role="region"><div class="faq-a-inner">Sí. Ofrecemos garantía en mano de obra para todos nuestros trabajos. Las condiciones específicas de garantía quedan detalladas en el contrato antes de iniciar cualquier proyecto.</div></div>
+      </div>
+      <div class="faq-item" role="listitem">
+        <div class="faq-q" role="button" tabindex="0" aria-expanded="false">
+          ¿Puedo contratar solo uno de los servicios?
+          <i class="fas fa-chevron-down" aria-hidden="true"></i>
+        </div>
+        <div class="faq-a" role="region"><div class="faq-a-inner">Absolutamente. Puedes contratar un solo servicio (solo CCTV, solo telecomunicaciones, solo terminaciones, etc.) o una solución integral. Nos adaptamos a tus necesidades y presupuesto.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== CONTACTO ========== -->
+<section id="contacto" aria-label="Información de contacto">
+  <div class="container">
+    <div class="contacto-header fade-in">
+      <div class="section-badge">Hablemos</div>
+      <h2 class="section-title">Contáctanos</h2>
+      <p class="section-subtitle" style="margin:0 auto;">Estamos disponibles de lunes a viernes para ayudarte con tu proyecto.</p>
+    </div>
+    <div class="contacto-inner">
+      <div class="contacto-info fade-in">
+        <div class="contact-item">
+          <div class="contact-icon"><i class="fas fa-phone-volume" aria-hidden="true"></i></div>
+          <div class="contact-text">
+            <h3 class="contact-heading">Teléfonos</h3>
+            <a href="tel:+56976491238">+56 9 7649 1238</a><br>
+            <a href="tel:+56957598100">+56 9 5759 8100</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon"><i class="fas fa-envelope" aria-hidden="true"></i></div>
+          <div class="contact-text">
+            <h3 class="contact-heading">Email</h3>
+            <a href="mailto:adancar.contacto@gmail.com">adancar.contacto@gmail.com</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon"><i class="fas fa-map-marker-alt" aria-hidden="true"></i></div>
+          <div class="contact-text">
+            <h3 class="contact-heading">Dirección</h3>
+            <p>El Alba 927, San Antonio<br>V Región, Chile</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon"><i class="fas fa-clock" aria-hidden="true"></i></div>
+          <div class="contact-text">
+            <h3 class="contact-heading">Horario de Atención</h3>
+            <p>Lunes a Viernes · 08:00 – 18:00 hrs</p>
+          </div>
+        </div>
+        <a href="https://wa.me/56976491238?text=Hola%20Adancar%2C%20necesito%20información%20sobre%20sus%20servicios" class="whatsapp-btn" target="_blank" rel="noopener noreferrer" aria-label="Escribir por WhatsApp">
+          <i class="fab fa-whatsapp" aria-hidden="true"></i>
+          Escribir por WhatsApp ahora
+        </a>
+        <!-- PENDIENTE: Agregar redes sociales cuando se creen las cuentas -->
+        <!-- <div style="display:flex;gap:12px;margin-top:16px;">
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram fa-lg"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook fa-lg"></i></a>
+        </div> -->
+      </div>
+      <div class="fade-in" style="display:flex;flex-direction:column;gap:24px;">
+        <div class="map-container">
+          <iframe
+            src="https://maps.google.com/maps?q=El+Alba+927,+San+Antonio,+Chile&z=15&output=embed"
+            title="Ubicación de Adancar en San Antonio, Chile"
+            allowfullscreen
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+           style="width:100%;border:0;"></iframe>
+        </div>
+        <div class="contact-form-quick">
+          <h3>Mensaje Rápido</h3>
+          <form id="contactForm" novalidate>
+            <div class="form-group">
+              <label for="c_nombre">Nombre<span aria-hidden="true">*</span></label>
+              <input type="text" id="c_nombre" class="form-control" placeholder="Tu nombre" autocomplete="name" required>
+            </div>
+            <div class="form-row">
+              <div class="form-group" style="margin-bottom:0">
+                <label for="c_tel">Teléfono<span aria-hidden="true">*</span></label>
+                <input type="tel" id="c_tel" class="form-control" placeholder="+56 9 ..." autocomplete="tel" required>
+              </div>
+              <div class="form-group" style="margin-bottom:0">
+                <label for="c_email2">Email<span aria-hidden="true">*</span></label>
+                <input type="email" id="c_email2" class="form-control" placeholder="tu@email.com" autocomplete="email" required>
+              </div>
+            </div>
+            <div class="form-group" style="margin-top:18px;">
+              <label for="c_msg">Mensaje<span aria-hidden="true">*</span></label>
+              <textarea id="c_msg" class="form-control" placeholder="¿En qué podemos ayudarte?" rows="3" required></textarea>
+            </div>
+            <div class="form-actions" style="margin-top:8px;">
+              <button type="button" class="btn btn-primary" id="cBtnWA" style="flex:1;justify-content:center;">
+                <i class="fab fa-whatsapp" aria-hidden="true"></i> WhatsApp
+              </button>
+              <button type="button" class="btn btn-outline" id="cBtnEmail" style="flex:1;justify-content:center;">
+                <i class="fas fa-envelope" aria-hidden="true"></i> Email
+              </button>
+            </div>
+            <div class="form-success" id="contactSuccess" role="alert" aria-live="polite">
+              <i class="fas fa-check-circle" aria-hidden="true"></i> ¡Mensaje enviado! Te contactamos pronto.
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== BLOG ========== -->
+<section id="blog" aria-label="Blog de Adancar">
+  <div class="container">
+    <div class="blog-header fade-in">
+      <div class="section-badge">Conocimiento</div>
+      <h2 class="section-title">Blog</h2>
+      <p class="section-subtitle" style="margin:0 auto;">Artículos técnicos sobre construcción, telecomunicaciones y seguridad.</p>
+    </div>
+    <div class="blog-grid">
+      <article class="blog-card fade-in" role="article">
+        <div class="blog-thumb t1" aria-hidden="true">🏗️</div>
+        <div class="blog-body">
+          <div class="blog-cat">Construcción</div>
+          <h3>5 Claves para Planificar una Obra Exitosa</h3>
+          <p>Los errores más comunes al iniciar una obra y cómo evitarlos. Desde la elección de materiales hasta la gestión de plazos.</p>
+        </div>
+        <div class="blog-footer">
+          <span class="blog-date">Mayo 2025</span>
+          <a href="#contacto" class="blog-link">Leer más <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+        </div>
+      </article>
+      <article class="blog-card fade-in" role="article">
+        <div class="blog-thumb t2" aria-hidden="true">🌐</div>
+        <div class="blog-body">
+          <div class="blog-cat">Telecomunicaciones</div>
+          <h3>Fibra Óptica vs. Cobre: ¿Qué Elegir?</h3>
+          <p>Comparativa técnica entre redes de fibra óptica y cable de cobre. Velocidades, costos y casos de uso reales en Chile.</p>
+        </div>
+        <div class="blog-footer">
+          <span class="blog-date">Mayo 2025</span>
+          <a href="#contacto" class="blog-link">Leer más <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+        </div>
+      </article>
+      <article class="blog-card fade-in" role="article">
+        <div class="blog-thumb t3" aria-hidden="true">📹</div>
+        <div class="blog-body">
+          <div class="blog-cat">CCTV y Seguridad</div>
+          <h3>Cámaras IP vs. Analógicas: Guía Completa</h3>
+          <p>Todo lo que necesitas saber antes de instalar un sistema de videovigilancia. Diferencias técnicas, costos y cuál conviene según tu caso.</p>
+        </div>
+        <div class="blog-footer">
+          <span class="blog-date">Mayo 2025</span>
+          <a href="#contacto" class="blog-link">Leer más <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+</main><!-- /main -->
+
+<!-- ========== FOOTER ========== -->
+<footer id="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <a href="#inicio" aria-label="Adancar - Inicio">
+            <img loading="lazy" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0MjAgMjYwIj4KICA8ZGVmcz4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0ibGdMZWZ0IiB4MT0iMCUiIHkxPSIxMDAlIiB4Mj0iNjAlIiB5Mj0iMCUiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMDBiNGQ4Ii8+CiAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzFhM2E2ZSIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0ibGdSaWdodCIgeDE9IjQwJSIgeTE9IjAlIiB4Mj0iMTAwJSIgeTI9IjEwMCUiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMWEzYTZlIi8+CiAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzIxOTZjNCIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICA8L2RlZnM+CiAgPCEtLSBMZWZ0IGxlZyBvZiBBIC0tPgogIDxwYXRoIGQ9Ik04MCwyMDAgTDEzOCw1MiBRMTQ2LDI2IDE2MiwyNCBRMTc2LDI0IDE4Miw0NiIgc3Ryb2tlPSJ1cmwoI2xnTGVmdCkiIHN0cm9rZS13aWR0aD0iMjIiIGZpbGw9Im5vbmUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgogIDwhLS0gUmlnaHQgbGVnIG9mIEEgLS0+CiAgPHBhdGggZD0iTTE4Miw0NiBRMTg4LDI2IDIwMiwyNCBRMjE4LDI0IDIyNiw1MiBMMjg0LDIwMCIgc3Ryb2tlPSJ1cmwoI2xnUmlnaHQpIiBzdHJva2Utd2lkdGg9IjIyIiBmaWxsPSJub25lIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KICA8IS0tIEJvdHRvbSBsZWZ0IGN1cnZlIC0tPgogIDxwYXRoIGQ9Ik03NCwyMDAgUTc4LDIyNCAxMDAsMjI0IFExMTgsMjI0IDEyOCwyMDgiIHN0cm9rZT0iIzFhM2E2ZSIgc3Ryb2tlLXdpZHRoPSIyMiIgZmlsbD0ibm9uZSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CiAgPCEtLSBCb3R0b20gcmlnaHQgY3VydmUgLS0+CiAgPHBhdGggZD0iTTI0MCwyMDggUTI1MCwyMjQgMjY4LDIyNCBRMjkwLDIyNCAyOTQsMjAwIiBzdHJva2U9IiMyMTk2YzQiIHN0cm9rZS13aWR0aD0iMjIiIGZpbGw9Im5vbmUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgogIDwhLS0gVGVjaCBvdmVybGF5IGN1cnZlIC0gZnJvbSBsb3dlciBsZWZ0IHRvIHVwcGVyIHJpZ2h0IC0tPgogIDxwYXRoIGQ9Ik05NCwxNzIgUTE2MCwxMDUgMjIwLDYyIiBzdHJva2U9IiMwMGI0ZDgiIHN0cm9rZS13aWR0aD0iNi41IiBmaWxsPSJub25lIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KICA8IS0tIE5vZGUgaGV4YWdvbiBsZWZ0IC0tPgogIDxyZWN0IHg9Ijg1IiB5PSIxNjMiIHdpZHRoPSIxOCIgaGVpZ2h0PSIxOCIgcng9IjMiIGZpbGw9IiMxYTNhNmUiIHRyYW5zZm9ybT0icm90YXRlKDQ1IDk0IDE3MikiLz4KICA8IS0tIE5vZGUgY2lyY2xlIG1pZGRsZSAtLT4KICA8Y2lyY2xlIGN4PSIxNjAiIGN5PSIxMTMiIHI9IjgiIGZpbGw9IiMyMTk2YzQiLz4KICA8IS0tIE5vZGUgaGV4YWdvbiByaWdodCAtLT4KICA8cmVjdCB4PSIyMTAiIHk9IjUyIiB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHJ4PSI0IiBmaWxsPSIjMWEzYTZlIiB0cmFuc2Zvcm09InJvdGF0ZSg0NSAyMjAgNjIpIi8+CiAgPCEtLSBEZWNvcmF0aXZlIGRvdHMgLS0+CiAgPGNpcmNsZSBjeD0iMjM4IiBjeT0iNTYiIHI9IjYiIGZpbGw9IiMwMGI0ZDgiIG9wYWNpdHk9IjAuOSIvPgogIDxjaXJjbGUgY3g9IjI1MiIgY3k9IjcyIiByPSI0LjUiIGZpbGw9IiMwMGI0ZDgiIG9wYWNpdHk9IjAuNzUiLz4KICA8Y2lyY2xlIGN4PSIyNDQiIGN5PSI4OCIgcj0iMy41IiBmaWxsPSIjMjE5NmM0IiBvcGFjaXR5PSIwLjY1Ii8+CiAgPGNpcmNsZSBjeD0iMjYyIiBjeT0iNjAiIHI9IjMiIGZpbGw9IiMwMGI0ZDgiIG9wYWNpdHk9IjAuNTUiLz4KICA8IS0tIEFEQU5DQVIgdGV4dCAtLT4KICA8dGV4dCB4PSIxODQiIHk9IjIzOCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsIEJsYWNrLCBJbXBhY3QsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iNDQiIGZvbnQtd2VpZ2h0PSI5MDAiIGZpbGw9IiMxYTNhNmUiIGxldHRlci1zcGFjaW5nPSI1Ij5BREFOQ0FSPC90ZXh0PgogIDwhLS0gU2VwYXJhdG9yIGxpbmUgLS0+CiAgPGxpbmUgeDE9IjEwMCIgeTE9IjI0NSIgeDI9IjI2OCIgeTI9IjI0NSIgc3Ryb2tlPSIjMjE5NmM0IiBzdHJva2Utd2lkdGg9IjEuNSIvPgogIDwhLS0gU0VSVklDSU9TIElUIHRleHQgLS0+CiAgPHRleHQgeD0iMTg0IiB5PSIyNTgiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9IjYwMCIgZmlsbD0iIzAwYjRkOCIgbGV0dGVyLXNwYWNpbmc9IjciPlNFUlZJQ0lPUyBJVDwvdGV4dD4KPC9zdmc+Cg==" alt="Adancar Servicios IT" height="56">
+          </a>
+        </div>
+        <p>Empresa de construcción integral en San Antonio, V Región, Chile. Construimos, conectamos y aseguramos tu proyecto en un solo contrato.</p>
+      </div>
+      <div class="footer-col">
+        <h3>Servicios</h3>
+        <ul>
+          <li><a href="#servicios">Obra Gruesa</a></li>
+          <li><a href="#servicios">Telecomunicaciones</a></li>
+          <li><a href="#servicios">CCTV y Seguridad</a></li>
+          <li><a href="#servicios">Instalaciones</a></li>
+          <li><a href="#servicios">Terminaciones</a></li>
+          <li><a href="#servicios">Proyectos Especiales</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Contacto</h3>
+        <div class="contact-detail"><i class="fas fa-phone" aria-hidden="true"></i><a href="tel:+56976491238">+56 9 7649 1238</a></div>
+        <div class="contact-detail"><i class="fas fa-phone" aria-hidden="true"></i><a href="tel:+56957598100">+56 9 5759 8100</a></div>
+        <div class="contact-detail"><i class="fas fa-envelope" aria-hidden="true"></i><a href="mailto:adancar.contacto@gmail.com">adancar.contacto@gmail.com</a></div>
+        <div class="contact-detail"><i class="fas fa-map-marker-alt" aria-hidden="true"></i><p>El Alba 927, San Antonio<br>V Región, Chile</p></div>
+        <div class="contact-detail"><i class="fas fa-clock" aria-hidden="true"></i><p>Lun–Vie 08:00–18:00 hrs</p></div>
+        <!-- PENDIENTE: Redes sociales -->
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 <span>Adancar</span> · Construcción Integral · San Antonio, Chile</p>
+      <p>Certificados: <span>DAWA</span> · Ing. Redes · Ciberseguridad · Construcción</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ========== CHATBOT ========== -->
+<div class="chat-wrapper" role="complementary" aria-label="Chat de asistencia">
+  <div class="chat-bubble-hint" id="chatHint" aria-hidden="true">¿Necesitas ayuda? 💬</div>
+  <div class="chat-window" id="chatWindow" role="dialog" aria-modal="true" aria-label="Chat de Adancar" aria-live="polite">
+    <div class="chat-head">
+      <div class="chat-head-avatar">
+        <img loading="lazy" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0MjAgMjYwIj4KICA8ZGVmcz4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0ibGdMZWZ0IiB4MT0iMCUiIHkxPSIxMDAlIiB4Mj0iNjAlIiB5Mj0iMCUiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMDBiNGQ4Ii8+CiAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzFhM2E2ZSIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0ibGdSaWdodCIgeDE9IjQwJSIgeTE9IjAlIiB4Mj0iMTAwJSIgeTI9IjEwMCUiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMWEzYTZlIi8+CiAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzIxOTZjNCIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICA8L2RlZnM+CiAgPCEtLSBMZWZ0IGxlZyBvZiBBIC0tPgogIDxwYXRoIGQ9Ik04MCwyMDAgTDEzOCw1MiBRMTQ2LDI2IDE2MiwyNCBRMTc2LDI0IDE4Miw0NiIgc3Ryb2tlPSJ1cmwoI2xnTGVmdCkiIHN0cm9rZS13aWR0aD0iMjIiIGZpbGw9Im5vbmUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgogIDwhLS0gUmlnaHQgbGVnIG9mIEEgLS0+CiAgPHBhdGggZD0iTTE4Miw0NiBRMTg4LDI2IDIwMiwyNCBRMjE4LDI0IDIyNiw1MiBMMjg0LDIwMCIgc3Ryb2tlPSJ1cmwoI2xnUmlnaHQpIiBzdHJva2Utd2lkdGg9IjIyIiBmaWxsPSJub25lIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KICA8IS0tIEJvdHRvbSBsZWZ0IGN1cnZlIC0tPgogIDxwYXRoIGQ9Ik03NCwyMDAgUTc4LDIyNCAxMDAsMjI0IFExMTgsMjI0IDEyOCwyMDgiIHN0cm9rZT0iIzFhM2E2ZSIgc3Ryb2tlLXdpZHRoPSIyMiIgZmlsbD0ibm9uZSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CiAgPCEtLSBCb3R0b20gcmlnaHQgY3VydmUgLS0+CiAgPHBhdGggZD0iTTI0MCwyMDggUTI1MCwyMjQgMjY4LDIyNCBRMjkwLDIyNCAyOTQsMjAwIiBzdHJva2U9IiMyMTk2YzQiIHN0cm9rZS13aWR0aD0iMjIiIGZpbGw9Im5vbmUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgogIDwhLS0gVGVjaCBvdmVybGF5IGN1cnZlIC0gZnJvbSBsb3dlciBsZWZ0IHRvIHVwcGVyIHJpZ2h0IC0tPgogIDxwYXRoIGQ9Ik05NCwxNzIgUTE2MCwxMDUgMjIwLDYyIiBzdHJva2U9IiMwMGI0ZDgiIHN0cm9rZS13aWR0aD0iNi41IiBmaWxsPSJub25lIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KICA8IS0tIE5vZGUgaGV4YWdvbiBsZWZ0IC0tPgogIDxyZWN0IHg9Ijg1IiB5PSIxNjMiIHdpZHRoPSIxOCIgaGVpZ2h0PSIxOCIgcng9IjMiIGZpbGw9IiMxYTNhNmUiIHRyYW5zZm9ybT0icm90YXRlKDQ1IDk0IDE3MikiLz4KICA8IS0tIE5vZGUgY2lyY2xlIG1pZGRsZSAtLT4KICA8Y2lyY2xlIGN4PSIxNjAiIGN5PSIxMTMiIHI9IjgiIGZpbGw9IiMyMTk2YzQiLz4KICA8IS0tIE5vZGUgaGV4YWdvbiByaWdodCAtLT4KICA8cmVjdCB4PSIyMTAiIHk9IjUyIiB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHJ4PSI0IiBmaWxsPSIjMWEzYTZlIiB0cmFuc2Zvcm09InJvdGF0ZSg0NSAyMjAgNjIpIi8+CiAgPCEtLSBEZWNvcmF0aXZlIGRvdHMgLS0+CiAgPGNpcmNsZSBjeD0iMjM4IiBjeT0iNTYiIHI9IjYiIGZpbGw9IiMwMGI0ZDgiIG9wYWNpdHk9IjAuOSIvPgogIDxjaXJjbGUgY3g9IjI1MiIgY3k9IjcyIiByPSI0LjUiIGZpbGw9IiMwMGI0ZDgiIG9wYWNpdHk9IjAuNzUiLz4KICA8Y2lyY2xlIGN4PSIyNDQiIGN5PSI4OCIgcj0iMy41IiBmaWxsPSIjMjE5NmM0IiBvcGFjaXR5PSIwLjY1Ii8+CiAgPGNpcmNsZSBjeD0iMjYyIiBjeT0iNjAiIHI9IjMiIGZpbGw9IiMwMGI0ZDgiIG9wYWNpdHk9IjAuNTUiLz4KICA8IS0tIEFEQU5DQVIgdGV4dCAtLT4KICA8dGV4dCB4PSIxODQiIHk9IjIzOCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsIEJsYWNrLCBJbXBhY3QsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iNDQiIGZvbnQtd2VpZ2h0PSI5MDAiIGZpbGw9IiMxYTNhNmUiIGxldHRlci1zcGFjaW5nPSI1Ij5BREFOQ0FSPC90ZXh0PgogIDwhLS0gU2VwYXJhdG9yIGxpbmUgLS0+CiAgPGxpbmUgeDE9IjEwMCIgeTE9IjI0NSIgeDI9IjI2OCIgeTI9IjI0NSIgc3Ryb2tlPSIjMjE5NmM0IiBzdHJva2Utd2lkdGg9IjEuNSIvPgogIDwhLS0gU0VSVklDSU9TIElUIHRleHQgLS0+CiAgPHRleHQgeD0iMTg0IiB5PSIyNTgiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9IjYwMCIgZmlsbD0iIzAwYjRkOCIgbGV0dGVyLXNwYWNpbmc9IjciPlNFUlZJQ0lPUyBJVDwvdGV4dD4KPC9zdmc+Cg==" alt="Adancar" aria-hidden="true">
+      </div>
+      <div class="chat-head-info">
+        <h3>Adancar</h3>
+        <span>En línea ahora</span>
+      </div>
+      <button type="button" class="chat-close" id="chatClose" aria-label="Cerrar chat"><i class="fas fa-times" aria-hidden="true"></i></button>
+    </div>
+    <div class="chat-messages" id="chatMessages" aria-label="Mensajes del chat" aria-live="polite" aria-atomic="false"></div>
+    <div class="chat-input-wrap">
+      <input type="text" class="chat-input" id="chatInput" placeholder="Escribe tu pregunta..." aria-label="Mensaje al chat" autocomplete="off">
+      <button type="button" class="chat-send" id="chatSend" aria-label="Enviar mensaje"><i class="fas fa-paper-plane" aria-hidden="true"></i></button>
+    </div>
+  </div>
+  <button type="button" class="chat-toggle" id="chatToggle" aria-label="Abrir chat de ayuda" aria-expanded="false">
+    <img loading="lazy" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0MjAgMjYwIj4KICA8ZGVmcz4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0ibGdMZWZ0IiB4MT0iMCUiIHkxPSIxMDAlIiB4Mj0iNjAlIiB5Mj0iMCUiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMDBiNGQ4Ii8+CiAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzFhM2E2ZSIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0ibGdSaWdodCIgeDE9IjQwJSIgeTE9IjAlIiB4Mj0iMTAwJSIgeTI9IjEwMCUiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMWEzYTZlIi8+CiAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzIxOTZjNCIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICA8L2RlZnM+CiAgPCEtLSBMZWZ0IGxlZyBvZiBBIC0tPgogIDxwYXRoIGQ9Ik04MCwyMDAgTDEzOCw1MiBRMTQ2LDI2IDE2MiwyNCBRMTc2LDI0IDE4Miw0NiIgc3Ryb2tlPSJ1cmwoI2xnTGVmdCkiIHN0cm9rZS13aWR0aD0iMjIiIGZpbGw9Im5vbmUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgogIDwhLS0gUmlnaHQgbGVnIG9mIEEgLS0+CiAgPHBhdGggZD0iTTE4Miw0NiBRMTg4LDI2IDIwMiwyNCBRMjE4LDI0IDIyNiw1MiBMMjg0LDIwMCIgc3Ryb2tlPSJ1cmwoI2xnUmlnaHQpIiBzdHJva2Utd2lkdGg9IjIyIiBmaWxsPSJub25lIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KICA8IS0tIEJvdHRvbSBsZWZ0IGN1cnZlIC0tPgogIDxwYXRoIGQ9Ik03NCwyMDAgUTc4LDIyNCAxMDAsMjI0IFExMTgsMjI0IDEyOCwyMDgiIHN0cm9rZT0iIzFhM2E2ZSIgc3Ryb2tlLXdpZHRoPSIyMiIgZmlsbD0ibm9uZSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CiAgPCEtLSBCb3R0b20gcmlnaHQgY3VydmUgLS0+CiAgPHBhdGggZD0iTTI0MCwyMDggUTI1MCwyMjQgMjY4LDIyNCBRMjkwLDIyNCAyOTQsMjAwIiBzdHJva2U9IiMyMTk2YzQiIHN0cm9rZS13aWR0aD0iMjIiIGZpbGw9Im5vbmUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgogIDwhLS0gVGVjaCBvdmVybGF5IGN1cnZlIC0gZnJvbSBsb3dlciBsZWZ0IHRvIHVwcGVyIHJpZ2h0IC0tPgogIDxwYXRoIGQ9Ik05NCwxNzIgUTE2MCwxMDUgMjIwLDYyIiBzdHJva2U9IiMwMGI0ZDgiIHN0cm9rZS13aWR0aD0iNi41IiBmaWxsPSJub25lIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KICA8IS0tIE5vZGUgaGV4YWdvbiBsZWZ0IC0tPgogIDxyZWN0IHg9Ijg1IiB5PSIxNjMiIHdpZHRoPSIxOCIgaGVpZ2h0PSIxOCIgcng9IjMiIGZpbGw9IiMxYTNhNmUiIHRyYW5zZm9ybT0icm90YXRlKDQ1IDk0IDE3MikiLz4KICA8IS0tIE5vZGUgY2lyY2xlIG1pZGRsZSAtLT4KICA8Y2lyY2xlIGN4PSIxNjAiIGN5PSIxMTMiIHI9IjgiIGZpbGw9IiMyMTk2YzQiLz4KICA8IS0tIE5vZGUgaGV4YWdvbiByaWdodCAtLT4KICA8cmVjdCB4PSIyMTAiIHk9IjUyIiB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHJ4PSI0IiBmaWxsPSIjMWEzYTZlIiB0cmFuc2Zvcm09InJvdGF0ZSg0NSAyMjAgNjIpIi8+CiAgPCEtLSBEZWNvcmF0aXZlIGRvdHMgLS0+CiAgPGNpcmNsZSBjeD0iMjM4IiBjeT0iNTYiIHI9IjYiIGZpbGw9IiMwMGI0ZDgiIG9wYWNpdHk9IjAuOSIvPgogIDxjaXJjbGUgY3g9IjI1MiIgY3k9IjcyIiByPSI0LjUiIGZpbGw9IiMwMGI0ZDgiIG9wYWNpdHk9IjAuNzUiLz4KICA8Y2lyY2xlIGN4PSIyNDQiIGN5PSI4OCIgcj0iMy41IiBmaWxsPSIjMjE5NmM0IiBvcGFjaXR5PSIwLjY1Ii8+CiAgPGNpcmNsZSBjeD0iMjYyIiBjeT0iNjAiIHI9IjMiIGZpbGw9IiMwMGI0ZDgiIG9wYWNpdHk9IjAuNTUiLz4KICA8IS0tIEFEQU5DQVIgdGV4dCAtLT4KICA8dGV4dCB4PSIxODQiIHk9IjIzOCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsIEJsYWNrLCBJbXBhY3QsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iNDQiIGZvbnQtd2VpZ2h0PSI5MDAiIGZpbGw9IiMxYTNhNmUiIGxldHRlci1zcGFjaW5nPSI1Ij5BREFOQ0FSPC90ZXh0PgogIDwhLS0gU2VwYXJhdG9yIGxpbmUgLS0+CiAgPGxpbmUgeDE9IjEwMCIgeTE9IjI0NSIgeDI9IjI2OCIgeTI9IjI0NSIgc3Ryb2tlPSIjMjE5NmM0IiBzdHJva2Utd2lkdGg9IjEuNSIvPgogIDwhLS0gU0VSVklDSU9TIElUIHRleHQgLS0+CiAgPHRleHQgeD0iMTg0IiB5PSIyNTgiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9IjYwMCIgZmlsbD0iIzAwYjRkOCIgbGV0dGVyLXNwYWNpbmc9IjciPlNFUlZJQ0lPUyBJVDwvdGV4dD4KPC9zdmc+Cg==" alt="Chat Adancar" aria-hidden="true">
+    <span class="chat-status" aria-hidden="true"></span>
+  </button>
+</div>
+
+<script>
+// ========== NAV & MOBILE MENU ==========
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobileMenu');
+const mobLinks = document.querySelectorAll('.mob-link');
+
+hamburger.addEventListener('click', () => {
+  const isOpen = mobileMenu.classList.toggle('open');
+  hamburger.classList.toggle('open', isOpen);
+  hamburger.setAttribute('aria-expanded', isOpen);
+  document.body.style.overflow = isOpen ? 'hidden' : '';
+});
+
+mobLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    mobileMenu.classList.remove('open');
+    hamburger.classList.remove('open');
+    hamburger.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+  });
+});
+
+document.addEventListener('click', e => {
+  if (mobileMenu.classList.contains('open') && !mobileMenu.contains(e.target) && !hamburger.contains(e.target)) {
+    mobileMenu.classList.remove('open');
+    hamburger.classList.remove('open');
+    hamburger.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+  }
+});
+
+// ========== SCROLL ANIMATIONS ==========
+const fadeEls = document.querySelectorAll('.fade-in');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry, i) => {
+    if (entry.isIntersecting) {
+      setTimeout(() => entry.target.classList.add('visible'), i * 80);
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+fadeEls.forEach(el => observer.observe(el));
+
+// ========== FAQ ACCORDION ==========
+document.querySelectorAll('.faq-q').forEach(q => {
+  q.addEventListener('click', () => {
+    const item = q.closest('.faq-item');
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => {
+      i.classList.remove('open');
+      i.querySelector('.faq-q').setAttribute('aria-expanded', 'false');
+    });
+    if (!isOpen) {
+      item.classList.add('open');
+      q.setAttribute('aria-expanded', 'true');
+    }
+  });
+  q.addEventListener('keydown', e => {
+    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); q.click(); }
+  });
+});
+
+// ========== FORM HELPERS ==========
+function validateEmail(email) {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+}
+
+function markError(el) {
+  el.classList.add('error');
+  el.focus();
+}
+
+function clearErrors(form) {
+  form.querySelectorAll('.error').forEach(el => el.classList.remove('error'));
+}
+
+function buildMsg(nombre, email, tel, tipo, desc, region, plazo, presupuesto) {
+  return `*Nueva Solicitud de Cotización - Adancar*\n\n` +
+    `■ Nombre: ${nombre}\n` +
+    `■ Email: ${email}\n` +
+    `■ Teléfono: ${tel}\n` +
+    `■ Tipo de proyecto: ${tipo}\n` +
+    `■ Descripción: ${desc || 'No especificada'}\n` +
+    `■ Región/Comuna: ${region || 'No especificada'}\n` +
+    `■ Plazo estimado: ${plazo || 'Por definir'}\n` +
+    `■ Presupuesto aproximado: ${presupuesto || 'Por definir'}`;
+}
+
+// ========== QUOTE FORM ==========
+function getQuoteData() {
+  return {
+    nombre: document.getElementById('q_nombre').value.trim(),
+    email: document.getElementById('q_email').value.trim(),
+    tel: document.getElementById('q_telefono').value.trim(),
+    tipo: document.getElementById('q_tipo').value,
+    desc: document.getElementById('q_desc').value.trim(),
+    region: document.getElementById('q_region').value.trim(),
+    plazo: document.getElementById('q_plazo').value,
+    presupuesto: document.getElementById('q_presupuesto').value
+  };
+}
+
+function validateQuote(d) {
+  clearErrors(document.getElementById('quoteForm'));
+  if (!d.nombre) { markError(document.getElementById('q_nombre')); return false; }
+  if (!d.tel) { markError(document.getElementById('q_telefono')); return false; }
+  if (!d.email || !validateEmail(d.email)) { markError(document.getElementById('q_email')); return false; }
+  if (!d.tipo) { markError(document.getElementById('q_tipo')); return false; }
+  return true;
+}
+
+function showFormSuccess(id) {
+  const el = document.getElementById(id);
+  el.style.display = 'block';
+  setTimeout(() => { el.style.display = 'none'; }, 5000);
+}
+
+document.getElementById('btnWhatsApp').addEventListener('click', () => {
+  const d = getQuoteData();
+  if (!validateQuote(d)) return;
+  const msg = buildMsg(d.nombre, d.email, d.tel, d.tipo, d.desc, d.region, d.plazo, d.presupuesto);
+  window.open('https://wa.me/56976491238?text=' + encodeURIComponent(msg), '_blank');
+  showFormSuccess('formSuccess');
+  document.getElementById('quoteForm').reset();
+});
+
+document.getElementById('btnEmail').addEventListener('click', () => {
+  const d = getQuoteData();
+  if (!validateQuote(d)) return;
+  const subject = encodeURIComponent('Solicitud de Cotización - ' + d.tipo);
+  const body = encodeURIComponent(buildMsg(d.nombre, d.email, d.tel, d.tipo, d.desc, d.region, d.plazo, d.presupuesto));
+  window.location.href = 'mailto:adancar.contacto@gmail.com?subject=' + subject + '&body=' + body;
+  showFormSuccess('formSuccess');
+  document.getElementById('quoteForm').reset();
+});
+
+// Remove error class on input
+['q_nombre','q_telefono','q_email'].forEach(id => {
+  document.getElementById(id).addEventListener('input', function() { this.classList.remove('error'); });
+document.getElementById('q_tipo').addEventListener('change', function() { this.classList.remove('error'); });
+});
+
+// ========== CONTACT FORM QUICK ==========
+function getContactData() {
+  return {
+    nombre: document.getElementById('c_nombre').value.trim(),
+    tel: document.getElementById('c_tel').value.trim(),
+    email: document.getElementById('c_email2').value.trim(),
+    msg: document.getElementById('c_msg').value.trim()
+  };
+}
+
+function validateContact(d) {
+  clearErrors(document.getElementById('contactForm'));
+  if (!d.nombre) { markError(document.getElementById('c_nombre')); return false; }
+  if (!d.tel) { markError(document.getElementById('c_tel')); return false; }
+  if (!d.email || !validateEmail(d.email)) { markError(document.getElementById('c_email2')); return false; }
+  if (!d.msg) { markError(document.getElementById('c_msg')); return false; }
+  return true;
+}
+
+function buildContactMsg(d) {
+  return `*Mensaje Rápido - Adancar*\n\n■ Nombre: ${d.nombre}\n■ Email: ${d.email}\n■ Teléfono: ${d.tel}\n■ Mensaje: ${d.msg}`;
+}
+
+document.getElementById('cBtnWA').addEventListener('click', () => {
+  const d = getContactData();
+  if (!validateContact(d)) return;
+  window.open('https://wa.me/56976491238?text=' + encodeURIComponent(buildContactMsg(d)), '_blank');
+  showFormSuccess('contactSuccess');
+  document.getElementById('contactForm').reset();
+});
+
+document.getElementById('cBtnEmail').addEventListener('click', () => {
+  const d = getContactData();
+  if (!validateContact(d)) return;
+  const subject = encodeURIComponent('Mensaje desde Adancar.cl - ' + d.nombre);
+  const body = encodeURIComponent(buildContactMsg(d));
+  window.location.href = 'mailto:adancar.contacto@gmail.com?subject=' + subject + '&body=' + body;
+  showFormSuccess('contactSuccess');
+  document.getElementById('contactForm').reset();
+});
+
+// ========== CHATBOT ==========
+const chatToggle = document.getElementById('chatToggle');
+const chatWindow = document.getElementById('chatWindow');
+const chatClose = document.getElementById('chatClose');
+const chatInput = document.getElementById('chatInput');
+const chatSend = document.getElementById('chatSend');
+const chatMessages = document.getElementById('chatMessages');
+const chatHint = document.getElementById('chatHint');
+let chatOpened = false;
+
+const botResponses = [
+  {
+    keys: ['hola','buenos','buenas','hey','hi','saludos'],
+    reply: '¡Hola! 👋 Soy el asistente virtual de <strong>Adancar</strong>. Estamos en San Antonio, Chile, y nos especializamos en construcción integral, telecomunicaciones y CCTV.<br><br>¿En qué puedo ayudarte hoy?'
+  },
+  {
+    keys: ['servicio','hacen','ofrecen','trabajan','especialidad'],
+    reply: 'Ofrecemos 6 servicios principales:<br><br>🏗️ <strong>Obra Gruesa</strong><br>📡 <strong>Telecomunicaciones</strong><br>📹 <strong>CCTV y Seguridad</strong><br>⚡ <strong>Instalaciones</strong><br>🎨 <strong>Terminaciones</strong><br>🔧 <strong>Proyectos Especiales</strong><br><br>¡Todo en un solo contrato!'
+  },
+  {
+    keys: ['cotiz','presupuest','precio','costo','valor','cuanto'],
+    reply: 'Las cotizaciones son <strong>sin costo y sin compromiso</strong>. Respondemos en menos de 24 horas.<br><br><a class="chat-btn" href="#cotizar">📋 Solicitar Cotización</a>'
+  },
+  {
+    keys: ['cctv','camara','seguridad','dawa','videovigilancia','camaras'],
+    reply: 'Somos empresa instaladora <strong>certificada DAWA</strong> en sistemas de CCTV y videovigilancia. Instalamos cámaras IP y analógicas, tanto en proyectos residenciales como comerciales.<br><br><a class="chat-btn" href="#cotizar">📋 Cotizar CCTV</a>'
+  },
+  {
+    keys: ['teleco','fibra','torre','red','internet','conexion'],
+    reply: 'Instalamos <strong>fibra óptica</strong>, torres de comunicación y redes de datos empresariales. Conectividad de alta velocidad y confiabilidad para cualquier proyecto.<br><br><a class="chat-btn" href="#cotizar">📋 Cotizar Telecomunicaciones</a>'
+  },
+  {
+    keys: ['equipo','socio','fundador','certif','quien'],
+    reply: 'Somos dos co-fundadores:<br><br>👨‍💻 <strong>Socio Tecnológico</strong>: DAWA-CCTV, Ing. Redes, Diplomado Ciberseguridad<br>👷 <strong>Socio Constructor</strong>: Obra Gruesa, Instalaciones, Terminaciones<br><br>Juntos cubrimos el 100% del ciclo constructivo.'
+  },
+  {
+    keys: ['zona','region','cobertura','donde','trabajan','ubicacion','lugar'],
+    reply: 'Tenemos base en <strong>San Antonio, V Región</strong> y cubrimos toda la zona. Para proyectos fuera de la región, evaluamos según el alcance. ¡Consúltanos!'
+  },
+  {
+    keys: ['garantia','garantizan','respaldo'],
+    reply: 'Sí, ofrecemos <strong>garantía en mano de obra</strong> en todos nuestros trabajos. Las condiciones específicas quedan detalladas en el contrato antes de iniciar.'
+  },
+  {
+    keys: ['proceso','pasos','como','flujo'],
+    reply: 'Nuestro proceso es simple:<br><br>1️⃣ <strong>Contacto</strong><br>2️⃣ <strong>Cotización</strong> (en 24h)<br>3️⃣ <strong>Planificación</strong><br>4️⃣ <strong>Ejecución</strong><br>5️⃣ <strong>Entrega</strong> con garantía'
+  },
+  {
+    keys: ['telefono','fono','numero','llamo','llamar'],
+    reply: 'Puedes llamarnos a:<br><br>📞 <a href="tel:+56976491238" style="color:var(--logo-cyan)">+56 9 7649 1238</a><br>📞 <a href="tel:+56957598100" style="color:var(--logo-cyan)">+56 9 5759 8100</a><br><br>Atendemos Lunes a Viernes 08:00–18:00 hrs.'
+  },
+  {
+    keys: ['email','correo','mail'],
+    reply: '📧 <a href="mailto:adancar.contacto@gmail.com" style="color:var(--logo-cyan)">adancar.contacto@gmail.com</a><br><br>Respondemos en menos de 24 horas hábiles.'
+  },
+  {
+    keys: ['whatsapp','wsp','wasap','wp'],
+    reply: 'Escríbenos directo por WhatsApp:<br><br><a class="chat-btn" href="https://wa.me/56976491238?text=Hola%20Adancar" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> Abrir WhatsApp</a>'
+  },
+  {
+    keys: ['horario','atienden','abierto','disponible'],
+    reply: '🕐 Atendemos <strong>Lunes a Viernes</strong><br>08:00 – 18:00 hrs<br><br>Fuera de horario puedes escribirnos y te respondemos al día siguiente hábil.'
+  },
+  {
+    keys: ['gracias','perfecto','ok','genial','excelente','listo'],
+    reply: '¡De nada! 😊 Fue un gusto ayudarte. Si necesitas algo más, aquí estoy.<br><br>📞 +56 9 7649 1238'
+  }
+];
+
+function addMsg(text, isBot) {
+  const div = document.createElement('div');
+  div.className = 'msg ' + (isBot ? 'bot' : 'user');
+  if (isBot) {
+    div.innerHTML = text;
+  } else {
+    div.textContent = text;
+  }
+  chatMessages.appendChild(div);
+  chatMessages.scrollTop = chatMessages.scrollHeight;
+}
+
+function showTyping() {
+  const div = document.createElement('div');
+  div.className = 'msg bot typing';
+  div.id = 'typingIndicator';
+  div.innerHTML = '<span></span><span></span><span></span>';
+  chatMessages.appendChild(div);
+  chatMessages.scrollTop = chatMessages.scrollHeight;
+  return div;
+}
+
+function getBotReply(text) {
+  const lower = text.toLowerCase();
+  for (const r of botResponses) {
+    if (r.keys.some(k => lower.includes(k))) return r.reply;
+  }
+  return '¡Gracias por tu mensaje! Para ayudarte mejor, te sugerimos:<br><br>📧 <a href="mailto:adancar.contacto@gmail.com" style="color:var(--logo-cyan)">adancar.contacto@gmail.com</a><br><br><a class="chat-btn" href="https://wa.me/56976491238?text=' + encodeURIComponent(text) + '" rel="noopener noreferrer" target="_blank"><i class="fab fa-whatsapp"></i> Escribir por WhatsApp</a>';
+}
+
+function sendChatMessage() {
+  const text = chatInput.value.trim();
+  if (!text) return;
+  addMsg(text, false);
+  chatInput.value = '';
+  const typing = showTyping();
+  setTimeout(() => {
+    typing.remove();
+    addMsg(getBotReply(text), true);
+  }, 900 + Math.random() * 400);
+}
+
+chatToggle.addEventListener('click', () => {
+  const isOpen = chatWindow.classList.toggle('open');
+  chatToggle.setAttribute('aria-expanded', isOpen);
+  chatHint.style.display = 'none';
+  if (isOpen && !chatOpened) {
+    chatOpened = true;
+    setTimeout(() => {
+      addMsg('¡Hola! 👋 Soy el asistente de <strong>Adancar</strong>. ¿En qué puedo ayudarte? Puedes preguntarme sobre nuestros servicios, precios, equipo, zona de cobertura, etc.', true);
+    }, 400);
+  }
+  if (isOpen) setTimeout(() => chatInput.focus(), 400);
+});
+
+chatClose.addEventListener('click', () => {
+  chatWindow.classList.remove('open');
+  chatToggle.setAttribute('aria-expanded', 'false');
+  chatToggle.focus();
+});
+
+chatSend.addEventListener('click', sendChatMessage);
+chatInput.addEventListener('keydown', e => { if (e.key === 'Enter') sendChatMessage(); });
+
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape' && chatWindow.classList.contains('open')) {
+    chatWindow.classList.remove('open');
+    chatToggle.setAttribute('aria-expanded', 'false');
+    chatToggle.focus();
+  }
+});
+
+chatHint.addEventListener('click', () => chatToggle.click());
+
+// Auto-hide hint after 8s
+setTimeout(() => { if (chatHint) chatHint.style.display = 'none'; }, 8000);
+
+// ========== NAV SCROLL + ACTIVE LINKS + SCROLL-TO-TOP ==========
+const navEl = document.getElementById('nav');
+const scrollTopBtn = document.getElementById('scrollTopBtn');
+const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
+const sectionIds = Array.from(navLinks).map(a => a.getAttribute('href').slice(1));
+const sectionEls = sectionIds.map(id => document.getElementById(id)).filter(Boolean);
+
+function onPageScroll() {
+  const scrollY = window.scrollY;
+
+  // Nav scroll shrink
+  if (scrollY > 50) {
+    navEl.classList.add('scrolled');
+  } else {
+    navEl.classList.remove('scrolled');
+  }
+
+  // Active nav link
+  let current = sectionIds[0];
+  sectionEls.forEach(sec => {
+    if (sec && sec.offsetTop <= scrollY + 120) current = sec.id;
+  });
+  navLinks.forEach(a => {
+    a.classList.toggle('active', a.getAttribute('href') === '#' + current);
+  });
+
+  // Scroll-to-top visibility
+  if (scrollTopBtn) {
+    scrollTopBtn.classList.toggle('visible', scrollY > 400);
+  }
+}
+
+window.addEventListener('scroll', onPageScroll, { passive: true });
+onPageScroll();
+
+if (scrollTopBtn) {
+  scrollTopBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+}
+
+// Reset body overflow if window resized past mobile breakpoint while menu is open
+window.addEventListener('resize', () => {
+  if (window.innerWidth > 992 && mobileMenu.classList.contains('open')) {
+    mobileMenu.classList.remove('open');
+    hamburger.classList.remove('open');
+    hamburger.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+  }
+});
+</script>
+<button type="button" id="scrollTopBtn" aria-label="Volver al inicio" title="Volver al inicio">
+  <i class="fas fa-chevron-up" aria-hidden="true"></i>
+</button>
+</body>
+</html>
