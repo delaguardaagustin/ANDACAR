@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Adancar - Construcción Integral en San Antonio, Chile. Obra gruesa, telecomunicaciones, CCTV y seguridad. Empresa certificada DAWA.">
+<meta name="description" content="Adancar - Construcción Integral en San Antonio, Chile. Obra gruesa, telecomunicaciones, CCTV y seguridad. Empresa certificada DAHUA y Hikvision.">
 <meta name="keywords" content="construccion, telecomunicaciones, CCTV, seguridad, San Antonio, Chile, obra gruesa, fibra optica, instalaciones, adancar">
 <meta property="og:title" content="Adancar - Construcción Integral | San Antonio, Chile">
 <meta property="og:description" content="Construimos desde los cimientos hasta la última conexión. Construcción, Telecomunicaciones y Seguridad en San Antonio, V Región, Chile.">
@@ -415,6 +415,56 @@ textarea.form-control { resize: vertical; min-height: 100px; }
   #scrollTopBtn.visible { opacity: 1; transform: translateY(0); }
   #scrollTopBtn:hover { background: var(--yellow-dark); transform: translateY(-3px); }
 
+/* ========== BLOG MODAL ========== */
+.blog-modal-overlay {
+  display: none; position: fixed; inset: 0; z-index: 9000;
+  background: rgba(0,0,0,0.82); backdrop-filter: blur(4px);
+  align-items: center; justify-content: center; padding: 20px;
+}
+.blog-modal-overlay.open { display: flex; animation: modalFadeIn 0.25s ease; }
+@keyframes modalFadeIn { from { opacity:0; } to { opacity:1; } }
+.blog-modal {
+  background: var(--card-bg); border: 1px solid var(--border);
+  border-radius: var(--radius); max-width: 680px; width: 100%;
+  max-height: 88vh; overflow-y: auto; position: relative;
+  animation: modalSlideUp 0.3s ease;
+}
+@keyframes modalSlideUp { from { transform: translateY(30px); opacity:0; } to { transform: translateY(0); opacity:1; } }
+.blog-modal-thumb {
+  height: 200px; display: flex; align-items: center;
+  justify-content: center; font-size: 64px;
+}
+.blog-modal-body { padding: 32px; }
+.blog-modal-cat {
+  font-family: var(--font-title); font-size: 11px; font-weight: 700;
+  letter-spacing: 2px; text-transform: uppercase; color: var(--yellow); margin-bottom: 10px;
+}
+.blog-modal-body h2 {
+  font-family: var(--font-title); font-size: 26px; font-weight: 800;
+  text-transform: uppercase; letter-spacing: 1px; color: var(--white);
+  margin-bottom: 20px; line-height: 1.25;
+}
+.blog-modal-body p { font-size: 14.5px; color: var(--gray); line-height: 1.75; margin-bottom: 16px; }
+.blog-modal-body ul { padding-left: 20px; margin-bottom: 16px; }
+.blog-modal-body ul li { font-size: 14px; color: var(--gray); line-height: 1.7; margin-bottom: 6px; }
+.blog-modal-body strong { color: var(--white); }
+.blog-modal-close {
+  position: absolute; top: 14px; right: 16px;
+  background: rgba(255,255,255,0.07); border: none; border-radius: 50%;
+  width: 36px; height: 36px; display: flex; align-items: center; justify-content: center;
+  cursor: pointer; color: var(--gray); font-size: 16px;
+  transition: background var(--transition), color var(--transition);
+}
+.blog-modal-close:hover { background: var(--yellow); color: #000; }
+.blog-modal-cta {
+  display: inline-flex; align-items: center; gap: 8px;
+  margin-top: 8px; background: var(--yellow); color: #000;
+  padding: 12px 24px; border-radius: 6px; font-weight: 700;
+  font-size: 14px; text-decoration: none; transition: background var(--transition);
+}
+.blog-modal-cta:hover { background: var(--yellow-dark); }
+@media (max-width:600px) { .blog-modal-body { padding: 20px; } .blog-modal-body h2 { font-size: 20px; } }
+
 </style>
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0MjAgMjYwIj4KICA8ZGVmcz4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0ibGdMZWZ0IiB4MT0iMCUiIHkxPSIxMDAlIiB4Mj0iNjAlIiB5Mj0iMCUiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMDBiNGQ4Ii8+CiAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzFhM2E2ZSIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0ibGdSaWdodCIgeDE9IjQwJSIgeTE9IjAlIiB4Mj0iMTAwJSIgeTI9IjEwMCUiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMWEzYTZlIi8+CiAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzIxOTZjNCIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICA8L2RlZnM+CiAgPCEtLSBMZWZ0IGxlZyBvZiBBIC0tPgogIDxwYXRoIGQ9Ik04MCwyMDAgTDEzOCw1MiBRMTQ2LDI2IDE2MiwyNCBRMTc2LDI0IDE4Miw0NiIgc3Ryb2tlPSJ1cmwoI2xnTGVmdCkiIHN0cm9rZS13aWR0aD0iMjIiIGZpbGw9Im5vbmUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgogIDwhLS0gUmlnaHQgbGVnIG9mIEEgLS0+CiAgPHBhdGggZD0iTTE4Miw0NiBRMTg4LDI2IDIwMiwyNCBRMjE4LDI0IDIyNiw1MiBMMjg0LDIwMCIgc3Ryb2tlPSJ1cmwoI2xnUmlnaHQpIiBzdHJva2Utd2lkdGg9IjIyIiBmaWxsPSJub25lIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KICA8IS0tIEJvdHRvbSBsZWZ0IGN1cnZlIC0tPgogIDxwYXRoIGQ9Ik03NCwyMDAgUTc4LDIyNCAxMDAsMjI0IFExMTgsMjI0IDEyOCwyMDgiIHN0cm9rZT0iIzFhM2E2ZSIgc3Ryb2tlLXdpZHRoPSIyMiIgZmlsbD0ibm9uZSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CiAgPCEtLSBCb3R0b20gcmlnaHQgY3VydmUgLS0+CiAgPHBhdGggZD0iTTI0MCwyMDggUTI1MCwyMjQgMjY4LDIyNCBRMjkwLDIyNCAyOTQsMjAwIiBzdHJva2U9IiMyMTk2YzQiIHN0cm9rZS13aWR0aD0iMjIiIGZpbGw9Im5vbmUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgogIDwhLS0gVGVjaCBvdmVybGF5IGN1cnZlIC0gZnJvbSBsb3dlciBsZWZ0IHRvIHVwcGVyIHJpZ2h0IC0tPgogIDxwYXRoIGQ9Ik05NCwxNzIgUTE2MCwxMDUgMjIwLDYyIiBzdHJva2U9IiMwMGI0ZDgiIHN0cm9rZS13aWR0aD0iNi41IiBmaWxsPSJub25lIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KICA8IS0tIE5vZGUgaGV4YWdvbiBsZWZ0IC0tPgogIDxyZWN0IHg9Ijg1IiB5PSIxNjMiIHdpZHRoPSIxOCIgaGVpZ2h0PSIxOCIgcng9IjMiIGZpbGw9IiMxYTNhNmUiIHRyYW5zZm9ybT0icm90YXRlKDQ1IDk0IDE3MikiLz4KICA8IS0tIE5vZGUgY2lyY2xlIG1pZGRsZSAtLT4KICA8Y2lyY2xlIGN4PSIxNjAiIGN5PSIxMTMiIHI9IjgiIGZpbGw9IiMyMTk2YzQiLz4KICA8IS0tIE5vZGUgaGV4YWdvbiByaWdodCAtLT4KICA8cmVjdCB4PSIyMTAiIHk9IjUyIiB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHJ4PSI0IiBmaWxsPSIjMWEzYTZlIiB0cmFuc2Zvcm09InJvdGF0ZSg0NSAyMjAgNjIpIi8+CiAgPCEtLSBEZWNvcmF0aXZlIGRvdHMgLS0+CiAgPGNpcmNsZSBjeD0iMjM4IiBjeT0iNTYiIHI9IjYiIGZpbGw9IiMwMGI0ZDgiIG9wYWNpdHk9IjAuOSIvPgogIDxjaXJjbGUgY3g9IjI1MiIgY3k9IjcyIiByPSI0LjUiIGZpbGw9IiMwMGI0ZDgiIG9wYWNpdHk9IjAuNzUiLz4KICA8Y2lyY2xlIGN4PSIyNDQiIGN5PSI4OCIgcj0iMy41IiBmaWxsPSIjMjE5NmM0IiBvcGFjaXR5PSIwLjY1Ii8+CiAgPGNpcmNsZSBjeD0iMjYyIiBjeT0iNjAiIHI9IjMiIGZpbGw9IiMwMGI0ZDgiIG9wYWNpdHk9IjAuNTUiLz4KICA8IS0tIEFEQU5DQVIgdGV4dCAtLT4KICA8dGV4dCB4PSIxODQiIHk9IjIzOCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsIEJsYWNrLCBJbXBhY3QsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iNDQiIGZvbnQtd2VpZ2h0PSI5MDAiIGZpbGw9IiMxYTNhNmUiIGxldHRlci1zcGFjaW5nPSI1Ij5BREFOQ0FSPC90ZXh0PgogIDwhLS0gU2VwYXJhdG9yIGxpbmUgLS0+CiAgPGxpbmUgeDE9IjEwMCIgeTE9IjI0NSIgeDI9IjI2OCIgeTI9IjI0NSIgc3Ryb2tlPSIjMjE5NmM0IiBzdHJva2Utd2lkdGg9IjEuNSIvPgogIDwhLS0gU0VSVklDSU9TIElUIHRleHQgLS0+CiAgPHRleHQgeD0iMTg0IiB5PSIyNTgiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9IjYwMCIgZmlsbD0iIzAwYjRkOCIgbGV0dGVyLXNwYWNpbmc9IjciPlNFUlZJQ0lPUyBJVDwvdGV4dD4KPC9zdmc+Cg==">
 <link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg==">
@@ -593,7 +643,7 @@ textarea.form-control { resize: vertical; min-height: 100px; }
         <div class="service-icon"><i class="fas fa-video" aria-hidden="true"></i></div>
         <h3>CCTV y Seguridad</h3>
         <p>Diseño e instalación de sistemas de videovigilancia IP y analógicos. Empresa instaladora certificada.</p>
-        <span class="cert-badge"><i class="fas fa-certificate" aria-hidden="true"></i> Certificada DAWA</span>
+        <span class="cert-badge"><i class="fas fa-certificate" aria-hidden="true"></i> Certificada DAHUA · Hikvision</span>
       </article>
       <article class="service-card fade-in" role="article">
         <div class="service-icon"><i class="fas fa-bolt" aria-hidden="true"></i></div>
@@ -645,7 +695,7 @@ textarea.form-control { resize: vertical; min-height: 100px; }
         <div class="ventaja-icon"><i class="fas fa-certificate" aria-hidden="true"></i></div>
         <div class="ventaja-num"><i class="fas fa-star" style="font-size:40px" aria-hidden="true"></i></div>
         <h3>Certificados</h3>
-        <p>DAWA, Ingeniería de Redes, Ciberseguridad y Construcción. Acreditaciones que respaldan nuestra capacidad técnica.</p>
+        <p>DAHUA, Hikvision, Ingeniería de Redes, Ciberseguridad y Construcción. Acreditaciones que respaldan nuestra capacidad técnica.</p>
       </div>
     </div>
   </div>
@@ -705,9 +755,9 @@ textarea.form-control { resize: vertical; min-height: 100px; }
         <div class="team-avatar" aria-hidden="true">ST</div>
         <h3>Socio Tecnológico</h3>
         <div class="team-role">Redes · Telecomunicaciones · CCTV y Seguridad</div>
-        <p class="team-desc">Especialista en infraestructura de redes, telecomunicaciones y sistemas de seguridad. Certificado como empresa instaladora profesional de sistemas CCTV (DAWA), con formación avanzada en ciberseguridad y diseño de redes. Experiencia real en proyectos de conectividad y videovigilancia.</p>
+        <p class="team-desc">Especialista en infraestructura de redes, telecomunicaciones y sistemas de seguridad. Certificado como empresa instaladora profesional de sistemas CCTV (DAHUA · Hikvision), con formación avanzada en ciberseguridad y diseño de redes. Experiencia real en proyectos de conectividad y videovigilancia.</p>
         <div class="cert-list" role="list">
-          <div class="cert-item" role="listitem"><i class="fas fa-award" aria-hidden="true"></i> DAWA — Empresa Instaladora Certificada CCTV</div>
+          <div class="cert-item" role="listitem"><i class="fas fa-award" aria-hidden="true"></i> DAHUA · Hikvision — Empresa Instaladora Certificada CCTV</div>
           <div class="cert-item" role="listitem"><i class="fas fa-award" aria-hidden="true"></i> Ingeniería en Redes</div>
           <div class="cert-item" role="listitem"><i class="fas fa-award" aria-hidden="true"></i> Diplomado en Ciberseguridad</div>
           <div class="cert-item" role="listitem"><i class="fas fa-award" aria-hidden="true"></i> Diplomado en Redes</div>
@@ -826,8 +876,8 @@ textarea.form-control { resize: vertical; min-height: 100px; }
           <a href="tel:+56957598100" class="cotizar-feat" style="color:rgba(255,255,255,0.8);font-size:15px;text-decoration:none;">
             <i class="fas fa-phone" style="color:var(--yellow)"></i> +56 9 5759 8100
           </a>
-          <a href="mailto:adancar.contacto@gmail.com" class="cotizar-feat" style="color:rgba(255,255,255,0.8);font-size:15px;text-decoration:none;">
-            <i class="fas fa-envelope" style="color:var(--yellow)"></i> adancar.contacto@gmail.com
+          <a id="em1" href="#" class="cotizar-feat" style="color:rgba(255,255,255,0.8);font-size:15px;text-decoration:none;">
+            <i class="fas fa-envelope" style="color:var(--yellow)"></i> <span id="em1t"></span>
           </a>
         </div>
       </div>
@@ -978,7 +1028,7 @@ textarea.form-control { resize: vertical; min-height: 100px; }
           <div class="contact-icon"><i class="fas fa-envelope" aria-hidden="true"></i></div>
           <div class="contact-text">
             <h3 class="contact-heading">Email</h3>
-            <a href="mailto:adancar.contacto@gmail.com">adancar.contacto@gmail.com</a>
+            <a id="em2" href="#">adancar&#46;contacto&#64;gmail&#46;com</a>
           </div>
         </div>
         <div class="contact-item">
@@ -1072,7 +1122,7 @@ textarea.form-control { resize: vertical; min-height: 100px; }
         </div>
         <div class="blog-footer">
           <span class="blog-date">Mayo 2025</span>
-          <a href="#contacto" class="blog-link">Leer más <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+          <button onclick="openBlogModal('blog1')" class="blog-link" style="background:none;border:none;cursor:pointer;padding:0;">Leer más <i class="fas fa-arrow-right" aria-hidden="true"></i></button>
         </div>
       </article>
       <article class="blog-card fade-in" role="article">
@@ -1084,7 +1134,7 @@ textarea.form-control { resize: vertical; min-height: 100px; }
         </div>
         <div class="blog-footer">
           <span class="blog-date">Mayo 2025</span>
-          <a href="#contacto" class="blog-link">Leer más <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+          <button onclick="openBlogModal('blog2')" class="blog-link" style="background:none;border:none;cursor:pointer;padding:0;">Leer más <i class="fas fa-arrow-right" aria-hidden="true"></i></button>
         </div>
       </article>
       <article class="blog-card fade-in" role="article">
@@ -1096,12 +1146,76 @@ textarea.form-control { resize: vertical; min-height: 100px; }
         </div>
         <div class="blog-footer">
           <span class="blog-date">Mayo 2025</span>
-          <a href="#contacto" class="blog-link">Leer más <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+          <button onclick="openBlogModal('blog3')" class="blog-link" style="background:none;border:none;cursor:pointer;padding:0;">Leer más <i class="fas fa-arrow-right" aria-hidden="true"></i></button>
         </div>
       </article>
     </div>
   </div>
 </section>
+
+<!-- ========== BLOG MODALES ========== -->
+<div id="modal-blog1" class="blog-modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal1-title" onclick="closeBlogModal(event,this)">
+  <div class="blog-modal">
+    <button class="blog-modal-close" onclick="document.getElementById('modal-blog1').classList.remove('open')" aria-label="Cerrar"><i class="fas fa-times"></i></button>
+    <div class="blog-modal-thumb t1">🏗️</div>
+    <div class="blog-modal-body">
+      <div class="blog-modal-cat">Construcción</div>
+      <h2 id="modal1-title">5 Claves para Planificar una Obra Exitosa</h2>
+      <p>Iniciar una obra sin una planificación sólida es uno de los errores más costosos que puede cometer cualquier propietario o empresa. En Adancar, trabajamos con un proceso estructurado que nos permite entregar proyectos en plazo y dentro del presupuesto.</p>
+      <ul>
+        <li><strong>1. Definir el alcance desde el inicio:</strong> Establece con claridad qué incluye y qué no incluye el proyecto antes de firmar cualquier contrato. Los cambios de alcance son la causa número uno de sobrecostos.</li>
+        <li><strong>2. Elegir los materiales correctos:</strong> No siempre lo más barato es lo más conveniente. Un material de mala calidad puede triplicar los costos de mantención a largo plazo.</li>
+        <li><strong>3. Gestión de plazos con holguras reales:</strong> Todo proyecto tiene imprevistos. Contempla al menos un 15% de tiempo adicional en tu planificación para absorber retrasos sin impactar la entrega.</li>
+        <li><strong>4. Coordinación entre especialidades:</strong> Construcción, electricidad, telecomunicaciones y seguridad deben trabajar en sincronía. La falta de coordinación genera doble trabajo y daños entre gremios.</li>
+        <li><strong>5. Inspección técnica permanente:</strong> Tener un profesional que supervise el avance evita errores que luego son muy difíciles —y caros— de corregir.</li>
+      </ul>
+      <p>En Adancar coordinamos todas las especialidades desde un solo equipo, lo que reduce fricciones y garantiza coherencia técnica en cada etapa.</p>
+      <a href="#cotizar" class="blog-modal-cta" onclick="document.getElementById('modal-blog1').classList.remove('open')"><i class="fas fa-clipboard-list"></i> Solicitar Cotización</a>
+    </div>
+  </div>
+</div>
+
+<div id="modal-blog2" class="blog-modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal2-title" onclick="closeBlogModal(event,this)">
+  <div class="blog-modal">
+    <button class="blog-modal-close" onclick="document.getElementById('modal-blog2').classList.remove('open')" aria-label="Cerrar"><i class="fas fa-times"></i></button>
+    <div class="blog-modal-thumb t2">🌐</div>
+    <div class="blog-modal-body">
+      <div class="blog-modal-cat">Telecomunicaciones</div>
+      <h2 id="modal2-title">Fibra Óptica vs. Cobre: ¿Qué Elegir?</h2>
+      <p>Cuando se trata de infraestructura de red, la elección entre fibra óptica y cable de cobre (UTP/FTP) es una decisión técnica que impacta directamente en el rendimiento y los costos operativos de tu proyecto.</p>
+      <ul>
+        <li><strong>Velocidad y ancho de banda:</strong> La fibra óptica soporta velocidades de hasta 100 Gbps con pérdidas mínimas. El cobre (Cat6A) llega a 10 Gbps en distancias cortas, suficiente para la mayoría de los entornos de oficina.</li>
+        <li><strong>Distancia:</strong> La fibra puede cubrir kilómetros sin amplificadores. El cobre se limita a 100 metros por segmento, lo que requiere switches intermedios en instalaciones grandes.</li>
+        <li><strong>Costo inicial:</strong> El cobre sigue siendo más económico en la instalación. La fibra tiene un costo inicial mayor, pero se amortiza rápidamente en proyectos de gran escala.</li>
+        <li><strong>Inmunidad electromagnética:</strong> La fibra no se ve afectada por interferencias eléctricas ni rayos, ventaja clave en entornos industriales o con maquinaria pesada.</li>
+        <li><strong>¿Cuál elegir?</strong> Para edificios residenciales y oficinas medianas: cobre Cat6 o Cat6A es suficiente y económico. Para proyectos industriales, campus o enlaces entre edificios: fibra óptica es la única opción sensata.</li>
+      </ul>
+      <p>En Adancar diseñamos la solución de red que mejor se adapta a tu caso real, sin sobredimensionar ni quedar corto.</p>
+      <a href="#cotizar" class="blog-modal-cta" onclick="document.getElementById('modal-blog2').classList.remove('open')"><i class="fas fa-clipboard-list"></i> Solicitar Cotización</a>
+    </div>
+  </div>
+</div>
+
+<div id="modal-blog3" class="blog-modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal3-title" onclick="closeBlogModal(event,this)">
+  <div class="blog-modal">
+    <button class="blog-modal-close" onclick="document.getElementById('modal-blog3').classList.remove('open')" aria-label="Cerrar"><i class="fas fa-times"></i></button>
+    <div class="blog-modal-thumb t3">📹</div>
+    <div class="blog-modal-body">
+      <div class="blog-modal-cat">CCTV y Seguridad</div>
+      <h2 id="modal3-title">Cámaras IP vs. Analógicas: Guía Completa</h2>
+      <p>Antes de instalar un sistema de videovigilancia, es fundamental entender las diferencias técnicas entre cámaras IP y analógicas, ya que la elección determina la calidad del sistema, los costos y la escalabilidad futura.</p>
+      <ul>
+        <li><strong>Resolución:</strong> Las cámaras IP ofrecen desde 2MP hasta 12MP o más (4K). Las analógicas modernas (HD-TVI, AHD) alcanzan 2-8MP, pero con menor detalle en condiciones difíciles.</li>
+        <li><strong>Infraestructura:</strong> Las IP usan cableado de red (UTP Cat5e/Cat6) y alimentación PoE. Las analógicas requieren cable coaxial y alimentación separada, lo que encarece las instalaciones nuevas.</li>
+        <li><strong>Inteligencia artificial:</strong> Las cámaras IP DAHUA y Hikvision incorporan detección de rostros, placas patentes, conteo de personas y alertas inteligentes. Las analógicas tienen capacidades de IA muy limitadas.</li>
+        <li><strong>Escalabilidad:</strong> Un sistema IP puede crecer fácilmente agregando cámaras a la red existente. El analógico requiere más cableado y equipos adicionales.</li>
+        <li><strong>¿Cuándo usar analógico?</strong> Solo cuando existe infraestructura coaxial ya instalada en buen estado y el presupuesto es muy ajustado. En cualquier instalación nueva, recomendamos IP.</li>
+      </ul>
+      <p>Como empresa certificada DAHUA e Hikvision, instalamos sistemas de videovigilancia IP de alta precisión para hogares, comercios y proyectos industriales en San Antonio y la V Región.</p>
+      <a href="#cotizar" class="blog-modal-cta" onclick="document.getElementById('modal-blog3').classList.remove('open')"><i class="fas fa-clipboard-list"></i> Solicitar Cotización</a>
+    </div>
+  </div>
+</div>
 
 </main><!-- /main -->
 
@@ -1132,7 +1246,7 @@ textarea.form-control { resize: vertical; min-height: 100px; }
         <h3>Contacto</h3>
         <div class="contact-detail"><i class="fas fa-phone" aria-hidden="true"></i><a href="tel:+56976491238">+56 9 7649 1238</a></div>
         <div class="contact-detail"><i class="fas fa-phone" aria-hidden="true"></i><a href="tel:+56957598100">+56 9 5759 8100</a></div>
-        <div class="contact-detail"><i class="fas fa-envelope" aria-hidden="true"></i><a href="mailto:adancar.contacto@gmail.com">adancar.contacto@gmail.com</a></div>
+        <div class="contact-detail"><i class="fas fa-envelope" aria-hidden="true"></i><a id="em3" href="#">adancar&#46;contacto&#64;gmail&#46;com</a></div>
         <div class="contact-detail"><i class="fas fa-map-marker-alt" aria-hidden="true"></i><p>El Alba 927, San Antonio<br>V Región, Chile</p></div>
         <div class="contact-detail"><i class="fas fa-clock" aria-hidden="true"></i><p>Lun–Vie 08:00–18:00 hrs</p></div>
         <!-- PENDIENTE: Redes sociales -->
@@ -1140,7 +1254,7 @@ textarea.form-control { resize: vertical; min-height: 100px; }
     </div>
     <div class="footer-bottom">
       <p>© 2025 <span>Adancar</span> · Construcción Integral · San Antonio, Chile</p>
-      <p>Certificados: <span>DAWA</span> · Ing. Redes · Ciberseguridad · Construcción</p>
+      <p>Certificados: <span>DAHUA</span> · <span>Hikvision</span> · Ing. Redes · Ciberseguridad · Construcción</p>
     </div>
   </div>
 </footer>
@@ -1302,7 +1416,7 @@ document.getElementById('btnEmail').addEventListener('click', () => {
   if (!validateQuote(d)) return;
   const subject = encodeURIComponent('Solicitud de Cotización - ' + d.tipo);
   const body = encodeURIComponent(buildMsg(d.nombre, d.email, d.tel, d.tipo, d.desc, d.region, d.plazo, d.presupuesto));
-  window.location.href = 'mailto:adancar.contacto@gmail.com?subject=' + subject + '&body=' + body;
+  window.location.href = 'mailto:adancar.contacto' + '@' + 'gmail.com?subject=' + subject + '&body=' + body;
   showFormSuccess('formSuccess');
   document.getElementById('quoteForm').reset();
 });
@@ -1349,7 +1463,7 @@ document.getElementById('cBtnEmail').addEventListener('click', () => {
   if (!validateContact(d)) return;
   const subject = encodeURIComponent('Mensaje desde Adancar.cl - ' + d.nombre);
   const body = encodeURIComponent(buildContactMsg(d));
-  window.location.href = 'mailto:adancar.contacto@gmail.com?subject=' + subject + '&body=' + body;
+  window.location.href = 'mailto:adancar.contacto' + '@' + 'gmail.com?subject=' + subject + '&body=' + body;
   showFormSuccess('contactSuccess');
   document.getElementById('contactForm').reset();
 });
@@ -1378,8 +1492,8 @@ const botResponses = [
     reply: 'Las cotizaciones son <strong>sin costo y sin compromiso</strong>. Respondemos en menos de 24 horas.<br><br><a class="chat-btn" href="#cotizar">📋 Solicitar Cotización</a>'
   },
   {
-    keys: ['cctv','camara','seguridad','dawa','videovigilancia','camaras'],
-    reply: 'Somos empresa instaladora <strong>certificada DAWA</strong> en sistemas de CCTV y videovigilancia. Instalamos cámaras IP y analógicas, tanto en proyectos residenciales como comerciales.<br><br><a class="chat-btn" href="#cotizar">📋 Cotizar CCTV</a>'
+    keys: ['cctv','camara','seguridad','dahua','hikvision','videovigilancia','camaras'],
+    reply: 'Somos empresa instaladora <strong>certificada DAHUA · Hikvision</strong> en sistemas de CCTV y videovigilancia. Instalamos cámaras IP y analógicas, tanto en proyectos residenciales como comerciales.<br><br><a class="chat-btn" href="#cotizar">📋 Cotizar CCTV</a>'
   },
   {
     keys: ['teleco','fibra','torre','red','internet','conexion'],
@@ -1387,7 +1501,7 @@ const botResponses = [
   },
   {
     keys: ['equipo','socio','fundador','certif','quien'],
-    reply: 'Somos dos co-fundadores:<br><br>👨‍💻 <strong>Socio Tecnológico</strong>: DAWA-CCTV, Ing. Redes, Diplomado Ciberseguridad<br>👷 <strong>Socio Constructor</strong>: Obra Gruesa, Instalaciones, Terminaciones<br><br>Juntos cubrimos el 100% del ciclo constructivo.'
+    reply: 'Somos dos co-fundadores:<br><br>👨‍💻 <strong>Socio Tecnológico</strong>: DAHUA-CCTV, Ing. Redes, Diplomado Ciberseguridad<br>👷 <strong>Socio Constructor</strong>: Obra Gruesa, Instalaciones, Terminaciones<br><br>Juntos cubrimos el 100% del ciclo constructivo.'
   },
   {
     keys: ['zona','region','cobertura','donde','trabajan','ubicacion','lugar'],
@@ -1407,11 +1521,11 @@ const botResponses = [
   },
   {
     keys: ['email','correo','mail'],
-    reply: '📧 <a href="mailto:adancar.contacto@gmail.com" style="color:var(--logo-cyan)">adancar.contacto@gmail.com</a><br><br>Respondemos en menos de 24 horas hábiles.'
+    reply: '📧 <a href="mailto:adancar.contacto' + '@' + 'gmail.com" style="color:var(--logo-cyan)">adancar&#46;contacto&#64;gmail&#46;com</a><br><br>Respondemos en menos de 24 horas hábiles.'
   },
   {
     keys: ['whatsapp','wsp','wasap','wp'],
-    reply: 'Escríbenos directo por WhatsApp:<br><br><a class="chat-btn" href="https://wa.me/56976491238?text=Hola%20Adancar" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> Abrir WhatsApp</a>'
+    reply: 'Escríbenos directo por WhatsApp:<br><br><a class="chat-btn" href="https://wa.me/56976491238?text=Hola%20Adancar" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i> Abrir WhatsApp</a>'
   },
   {
     keys: ['horario','atienden','abierto','disponible'],
@@ -1450,7 +1564,7 @@ function getBotReply(text) {
   for (const r of botResponses) {
     if (r.keys.some(k => lower.includes(k))) return r.reply;
   }
-  return '¡Gracias por tu mensaje! Para ayudarte mejor, te sugerimos:<br><br>📧 <a href="mailto:adancar.contacto@gmail.com" style="color:var(--logo-cyan)">adancar.contacto@gmail.com</a><br><br><a class="chat-btn" href="https://wa.me/56976491238?text=' + encodeURIComponent(text) + '" rel="noopener noreferrer" target="_blank"><i class="fab fa-whatsapp"></i> Escribir por WhatsApp</a>';
+  return '¡Gracias por tu mensaje! Para ayudarte mejor, te sugerimos:<br><br>📧 <a href="mailto:adancar.contacto' + '@' + 'gmail.com" style="color:var(--logo-cyan)">adancar&#46;contacto&#64;gmail&#46;com</a><br><br><a class="chat-btn" href="https://wa.me/56976491238?text=' + encodeURIComponent(text) + '" rel="noopener noreferrer" target="_blank"><i class="fab fa-whatsapp"></i> Escribir por WhatsApp</a>';
 }
 
 function sendChatMessage() {
@@ -1550,9 +1664,54 @@ window.addEventListener('resize', () => {
     document.body.style.overflow = '';
   }
 });
+
+// ========== EMAIL OBFUSCATION ==========
+(function() {
+  var u = 'adancar.contacto', d = 'gmail.com', em = u + '@' + d;
+  var href = 'mailto:' + em;
+  var display = u + '&#64;' + d;
+  var links = [
+    { id: 'em1', span: 'em1t' },
+    { id: 'em2', span: null },
+    { id: 'em3', span: null }
+  ];
+  links.forEach(function(l) {
+    var el = document.getElementById(l.id);
+    if (!el) return;
+    el.href = href;
+    if (l.span) {
+      var sp = document.getElementById(l.span);
+      if (sp) sp.innerHTML = display;
+    } else {
+      el.innerHTML = display;
+    }
+  });
+})();
+
+// ========== BLOG MODALES ==========
+function openBlogModal(id) {
+  const modal = document.getElementById('modal-' + id);
+  if (!modal) return;
+  modal.classList.add('open');
+  document.body.style.overflow = 'hidden';
+  // Focus en el modal para accesibilidad
+  modal.querySelector('.blog-modal').focus && modal.querySelector('.blog-modal').setAttribute('tabindex','-1');
+}
+function closeBlogModal(e, overlay) {
+  if (e.target === overlay) {
+    overlay.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+}
+// Cerrar con ESC
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') {
+    document.querySelectorAll('.blog-modal-overlay.open').forEach(function(m) {
+      m.classList.remove('open');
+      document.body.style.overflow = '';
+    });
+  }
+});
 </script>
 <button type="button" id="scrollTopBtn" aria-label="Volver al inicio" title="Volver al inicio">
-  <i class="fas fa-chevron-up" aria-hidden="true"></i>
-</button>
-</body>
-</html>
+  <i class="fas fa-chevron-up" aria-hidde
